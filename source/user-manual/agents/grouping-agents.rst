@@ -23,6 +23,10 @@ Below are the steps to assign agents to a group with a specific configuration:
 
    .. note:: This behaviour corresponds to ``v3.7.0`` and later.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f2ae9b5b85a7b42e11f470441e1130bcdd56e51
    .. code-block:: console
 
       # /var/ossec/bin/agent_groups -a -i 002 -g dbms
