@@ -5,15 +5,19 @@
 Install Wazuh agent on Mac OS X
 ===============================
 
-The Mac OS X agent can be downloaded from :doc:`packages list<../packages-list/index>`. The current version has been tested on Mac OS X and should be compatible with other versions as well. You can install it by using the command line or following the GUI steps:
+The Mac OS X agent can be downloaded from :doc:`packages list<../packages-list/index>`. The current version has been tested on Mac OS X. You can install it by using the command line or following the GUI steps:
 
   a) The command line:
 
-     The following steps describe a simple installation.
+     The following step describe a simple installation.
 
      .. code-block:: console
 
             # installer -pkg wazuh-agent-3.9.0-1.pkg -target /
+
+
+     Automatic installation, registering and configuration
+     -----------------------------------------------------
 
      You can automate the agent registration and configuration process and have a Wazuh Agent installed, registered and reporting using only one command line. In order to do this, we need to define some environment variables. The mandatory environment variable to be defined for the registration process is ``WAZUH_AUTHD_SERVER``. The mandatory environment variable to be defined to tell the agent what the manager IP is ``WAZUH_MANAGER_IP``. And, if you want the Wazuh agent registered and reporting you should use, at least, both variables. 
 
