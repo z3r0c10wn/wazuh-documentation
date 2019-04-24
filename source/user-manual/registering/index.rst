@@ -16,4 +16,8 @@ In this section we describe how the registration process works, and more specifi
         :maxdepth: 2
 
         registration-process
+        using-command-line-linux
+        using-command-line-macos
+        using-command-line-windows
+        using-command-line-unix
         use-registration-service
