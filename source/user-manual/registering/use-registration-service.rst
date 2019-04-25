@@ -17,7 +17,7 @@ Launching the daemon on the manager with default options would allow any agent t
 +============+============================================================================================+=============================================================================================================================+
 | Not secure | :ref:`simple-registration-service`                                                         | The easiest method. There is no authentication or host verification.                                                        |
 +------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
-| Secure     | `Password authorization`_                                                                  | Allows agents to authenticate via a shared password. This method is easy but does not perform host validation.              |
+| Secure     | :ref:`password-authorization-registration-service`                                         | Allows agents to authenticate via a shared password. This method is easy but does not perform host validation.              |
 |            +--------------------------------+-----------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+
 |            | `Host verification using SSL`_ | `Manager verification using SSL`_                         | The manager's certificate is signed by a CA that agents use to validate the server. This may include host checking.         |
 |            |                                +---------------------------------+-------------------------+-----------------------------------------------------------------------------------------------------------------------------+
@@ -48,67 +48,6 @@ Otherwise, you can create a self-signed certificate using the following command:
   # openssl req -x509 -batch -nodes -days 365 -newkey rsa:2048 -out /var/ossec/etc/sslmanager.cert -keyout /var/ossec/etc/sslmanager.key
 
 Since version 3.8.0, the registration daemon ``ossec-auth`` is running by default when the installation is complete.
-
-Password authorization
-----------------------
-You can protect the manager from unauthorized registrations by using a password. Choose one by yourself, or let the registration service generate a random password.
-
-To allow this option, change the value to *yes* in the ``/var/ossec/etc/ossec.conf`` file:
-
-    .. code-block:: xml
-
-      <auth>
-        ...
-        <use_password>yes</use_password>
-        ...
-      </auth>
-
-To enable the password authorization, use the ``-P`` flag when running the registration service.
-
-1. Follow one of these steps on the manager:
-
-  * To use a custom password, edit the ``/var/ossec/etc/authd.pass`` file and write it. For example, if we want to use *TopSecret* as a password:
-
-    .. code-block:: console
-
-      # echo "TopSecret" > /var/ossec/etc/authd.pass
-      # /var/ossec/bin/ossec-authd -P
-
-      Accepting connections on port 1515. Using password specified on file: /var/ossec/etc/authd.pass
-
-  * If no password is specified on ``/var/ossec/etc/authd.pass``, the registration service will create a random password:
-
-    .. code-block:: console
-
-      # /var/ossec/bin/ossec-authd -P
-
-  <auth>
-    ...
-    <use_password>yes</use_password>
-    ...     
-  </auth>
-
-To apply the changes, restart the manager:
-
-  a. For Systemd:
-
-    .. code-block:: console
-
-      # systemctl restart wazuh-manager
-
-  b. For SysV Init:
-
-    .. code-block:: console
-
-      # service wazuh-manager restart
-
-To use a custom password, edit the ``/var/ossec/etc/authd.pass`` file and write it. For example, if we want to use *TopSecret* as a password:
-
-.. code-block:: console
-
-  # echo "TopSecret" > /var/ossec/etc/authd.pass
-
-Then, restart the manager.
 
 .. _verify-hosts:
 

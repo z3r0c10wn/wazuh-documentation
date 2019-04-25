@@ -22,4 +22,5 @@ In this section we describe how the registration process works, and more specifi
         using-command-line-unix
         use-registration-service
         simple-registration-method
+        password-authorization-registration-service
         restful-api-register
