@@ -51,58 +51,14 @@ Since version 3.8.0, the registration daemon ``ossec-auth`` is running by defaul
 
 .. _verify-hosts:
 
-Host verification using SSL
----------------------------
 
-Creating a Certificate of Authority (CA)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-To use the registration service with SSL certification, you must create a Certificate of Authority that will be used to sign certificates for the manager and the agents. The hosts will receive a copy of this CA in order to verify the remote certificate:
-
-.. code-block:: console
-
-  # openssl req -x509 -new -nodes -newkey rsa:2048 -keyout rootCA.key -out rootCA.pem -batch -subj "/C=US/ST=CA/O=Manager"
-
-.. warning::
-
-  The file ``rootCA.key`` that we have just created is the **private key** of the CA. It is needed to sign other certificates and it is critical to keep it secure. Note that we will never copy this file to other hosts.
-
-Manager verification using SSL
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. Issue and sign a certificate for the manager, entering the hostname or the IP address that agents will use to connect to the server. For example, if the manager's IP is **192.168.1.2**:
-
-  .. code-block:: console
-
-    # openssl req -new -nodes -newkey rsa:2048 -keyout sslmanager.key -out sslmanager.csr -subj '/C=US/CN=192.168.1.2'
-    # openssl x509 -req -days 365 -in sslmanager.csr -CA rootCA.pem -CAkey rootCA.key -out sslmanager.cert -CAcreateserial
-
-2. Copy the newly created certificate (and its key) to the ``/var/ossec/etc`` folder **on the manager**, and restart it:
-
-  .. code-block:: console
-
-    # cp sslmanager.cert sslmanager.key /var/ossec/etc
-    
-    # systemctl restart wazuh-manager 
-
-3. Copy the CA (**but not the key**) to the ``/var/ossec/etc`` folder **on the agent**, and run the ``agent-auth`` program:
-
-  a. For Linux systems:
-
-    .. code-block:: console
-
-      # cp rootCA.pem /var/ossec/etc
-      # /var/ossec/bin/agent-auth -m 192.168.1.2 -v /var/ossec/etc/rootCA.pem
-
-  b. For Windows systems, the CA must be copied to ``C:\Program Files (x86)\ossec-agent``:
-
-    .. code-block:: console
-
-      # cp rootCA.pem C:\Program Files (x86)\ossec-agent
-      # C:\Program Files (x86)\ossec-agent\agent-auth.exe -m 192.168.1.2 -v C:\Program Files (x86)\ossec-agent\rootCA.pem
 
 Agent verification using SSL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. image:: ../../images/manual/managing-agents/SSLregister2.png
+    :align: center
+    :width: 100%
 
 **Agent verification (without host validation)**
 
