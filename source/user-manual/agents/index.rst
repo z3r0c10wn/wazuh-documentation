@@ -16,8 +16,9 @@ This section describes how to list and remove registered agents and register age
         :maxdepth: 2
 
         agent-life-cycle
-        listing/index
-        remove-agents/index
         agent-connection
         grouping-agents
         remote-upgrading/index
+        command-line/index
+        restful-api/index
+        wazuh-app
