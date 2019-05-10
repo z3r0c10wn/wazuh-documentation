@@ -12,11 +12,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 .. tabs::
 
     .. tab:: Debian
-        
-        The DEB packages are suitable for Debian, Ubuntu, and other Debian-based systems.
-        
-        .. note:: All the commands described below need to be executed with root user privileges.
-        
+       
         1. To perform this procedure, the ``curl``, ``apt-transport-https`` and ``lsb-release`` packages must be installed on your system. If they are not already present, install them using the commands below:
         
           .. code-block:: console
