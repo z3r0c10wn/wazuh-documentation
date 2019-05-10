@@ -7,8 +7,9 @@ FROM keimlink/sphinx-doc:1.7.1
 
 COPY --chown=1000:1000 requirements.txt ./
 
+
 RUN . .venv/bin/activate \
-    && python -m pip install --requirement requirements.txt && python -m pip install sphinx-autobuild==0.7.1
+    && pip install --upgrade pip setuptools && python -m pip install --requirement requirements.txt && python -m pip install sphinx-autobuild==0.7.1
 
 EXPOSE 8000
 
