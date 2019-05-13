@@ -38,6 +38,8 @@ Available options
 - `same_dst_port`_
 - `same_location`_
 - `same_user`_
+- `same_field`_
+- `not_same_field`_
 - `different_url`_
 - `different_srcgeoip`_
 - `description`_
@@ -472,6 +474,55 @@ This option is used in conjunction with frequency and timeframe.
 | **Example of use** | <same_user />      |
 +--------------------+--------------------+
 
+
+same_field
+^^^^^^^^^
+
+Specifies that the dynamic field from an incoming event is the same as the one of a previous event which matched the same rule.
+
++--------------------+------------+
+| **Default Value**  | n/a        |
++--------------------+------------+
+| **Allowed values** | Any string |
++--------------------+------------+
+
+Example:
+
+    .. code-block:: xml
+    
+      <rule id="100001" level="3">
+        <if_sid>221</if_sid>
+        <field name="netinfo.iface.name">ens33</field>
+        <description>Testing interface alert</description>
+      </rule>
+
+      <rule id="100002" level="7" frequency="3" timeframe="300">
+        <if_matched_sid>100001</if_matched_sid>
+        <same_field>netinfo.iface.name</same_field>
+        <same_field>netinfo.iface.mac</same_field>
+        <not_same_field>netinfo.iface.rx_bytes</not_same_field>
+        <options>no_full_log</options>
+        <description>Testing options for correlating repeated fields</description>
+      </rule>
+    
+
+Rule 10002 matches when the third network inventory scan reports the same MAC address for the interface ens33 but the amount of received packets has changed between events.
+  
+
+not_same_field
+^^^^^^^^^^^^^^
+  
+Specifies that the dynamic field from an incoming event is different than the one of a previous event which matched the same rule.
+
++--------------------+------------+
+| **Default Value**  | n/a        |
++--------------------+------------+
+| **Allowed values** | Any string |
++--------------------+------------+
+
+In the previous option it can be found an example of use.
+
+  
 different_url
 ^^^^^^^^^^^^^
 
