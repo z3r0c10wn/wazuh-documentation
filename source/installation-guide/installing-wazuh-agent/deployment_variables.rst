@@ -1,9 +1,9 @@
 .. Copyright (C) 2019 Wazuh, Inc.
 
-.. _automated_deployment_variables:
+.. deployment_variables:
 
-Automated deployment variables
-==============================
+Deployment variables
+====================
 
 For an agent to be fully deployed and connected to the Wazuh server it needs to be installed, registered and configured. To make the process simple, the installers can use variables that allow automatic registration and configuration. 
 
