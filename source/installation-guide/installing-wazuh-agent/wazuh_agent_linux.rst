@@ -43,7 +43,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
    
                  .. code-block:: console
    
-                   # WAZUH_MANAGER_IP="192.168.1.2" apt-get install wazuh-agent 
+                   # WAZUH_MANAGER_IP="10.0.0.2" apt-get install wazuh-agent 
    
                  Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
@@ -96,7 +96,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               .. code-block:: console
 
-                # WAZUH_MANAGER_IP="192.168.1.2" yum install wazuh-agent 
+                # WAZUH_MANAGER_IP="10.0.0.2" yum install wazuh-agent 
 
               Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
@@ -142,7 +142,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               .. code-block:: console
 
-                # WAZUH_MANAGER_IP="192.168.1.2" dnf install wazuh-agent 
+                # WAZUH_MANAGER_IP="10.0.0.2" dnf install wazuh-agent 
 
               Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
@@ -189,7 +189,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               .. code-block:: console
 
-                # WAZUH_MANAGER_IP="192.168.1.2" yum install wazuh-agent 
+                # WAZUH_MANAGER_IP="10.0.0.2" yum install wazuh-agent 
 
               Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
@@ -235,7 +235,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               .. code-block:: console
 
-                # WAZUH_MANAGER_IP="192.168.1.2" yum install wazuh-agent 
+                # WAZUH_MANAGER_IP="10.0.0.2" yum install wazuh-agent 
 
               Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
@@ -301,7 +301,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               .. code-block:: console
 
-                # WAZUH_MANAGER_IP="192.168.1.2" zypper install wazuh-agent 
+                # WAZUH_MANAGER_IP="10.0.0.2" zypper install wazuh-agent 
 
               Now that agent is installed, registered and configured. Using the variable ``WAZUH_MANAGER_IP`` without ``WAZUH_AUTHD_SERVER`` the agent will register and report to the indicated IP of ``WAZUH_MANAGER_IP``. If you want to register to different Wazuh Manager, you need to use ``WAZUH_AUTHD_SERVER``. See the following document for additional automated deployment options: :doc:`automated deployment variables <automated_deployment_variables>`.   
 
