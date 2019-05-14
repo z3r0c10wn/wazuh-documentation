@@ -37,7 +37,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
    
                    # apt-get install wazuh-agent
    
-                 Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+                 Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
    
               .. tab:: Deploy
    
@@ -90,7 +90,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
                 # yum install wazuh-agent
 
-              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
 
            .. tab:: Deploy
 
@@ -136,7 +136,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
                 # dnf install wazuh-agent
 
-              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
 
            .. tab:: Deploy
 
@@ -183,7 +183,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
                 # yum install wazuh-agent
 
-              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
 
            .. tab:: Deploy
 
@@ -229,7 +229,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
                 # yum install wazuh-agent
 
-              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
 
            .. tab:: Deploy
 
@@ -295,7 +295,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
                 # zypper install wazuh-agent
 
-              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
+              Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the document: :doc:`user manual<../../user-manual/registering/index>`.
 
            .. tab:: Deploy
 
