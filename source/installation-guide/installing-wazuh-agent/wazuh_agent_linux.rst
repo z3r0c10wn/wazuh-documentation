@@ -27,7 +27,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list \
             apt-get update
         
-        3. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        3. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
         
            .. tabs::
    
@@ -80,7 +80,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
 
         .. tabs::
 
@@ -126,7 +126,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
 
         .. tabs::
 
@@ -173,7 +173,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
 
         .. tabs::
 
@@ -219,7 +219,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
 
         .. tabs::
 
@@ -285,7 +285,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             EOF
 
 
-        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deployment:
 
         .. tabs::
 
