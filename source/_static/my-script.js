@@ -59,9 +59,9 @@ function addVersions() {
                 extraPath += '/' + pathTokens[i];
             }
         }
-        
+
         if(extraPath === '/not_found.html') extraPath = '';
-        
+
         $.ajax({
             type: 'HEAD',
             url: event.target.value + extraPath,
@@ -73,4 +73,12 @@ function addVersions() {
             }
         });
     });
+}
+
+// Polyfill for compatibility with Internet Explorer 11
+if (!String.prototype.startsWith) {
+	String.prototype.startsWith = function(searchString, position) {
+		position = position || 0;
+		return this.indexOf(searchString, position) === position;
+	};
 }
