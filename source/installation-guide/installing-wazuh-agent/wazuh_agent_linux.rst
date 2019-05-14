@@ -27,7 +27,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             echo "deb https://packages.wazuh.com/3.x/apt/ stable main" | tee /etc/apt/sources.list.d/wazuh.list \
             apt-get update
         
-        3. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        3. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
         
            .. tabs::
    
@@ -39,7 +39,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
    
                  **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
    
-              .. tab:: Automated deploy
+              .. tab:: Deploy
    
                  .. code-block:: console
    
@@ -80,7 +80,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
 
         .. tabs::
 
@@ -92,7 +92,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
 
-           .. tab:: Automated deploy
+           .. tab:: Deploy
 
               .. code-block:: console
 
@@ -126,7 +126,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
 
         .. tabs::
 
@@ -138,7 +138,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
 
-           .. tab:: Automated deploy
+           .. tab:: Deploy
 
               .. code-block:: console
 
@@ -173,7 +173,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
 
         .. tabs::
 
@@ -185,7 +185,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
 
-           .. tab:: Automated deploy
+           .. tab:: Deploy
 
               .. code-block:: console
 
@@ -219,7 +219,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             protect=1
             EOF
 
-        2. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
 
         .. tabs::
 
@@ -231,7 +231,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
 
-           .. tab:: Automated deploy
+           .. tab:: Deploy
 
               .. code-block:: console
 
@@ -285,7 +285,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
             EOF
 
 
-        2. On your terminal, install the Wazuh agent. You can choose only installation or an automated deploy:
+        2. On your terminal, install the Wazuh agent. You can choose installation or a deploy:
 
         .. tabs::
 
@@ -297,7 +297,7 @@ The Wazuh agent can be installed in the most of Linux Distribution. It's possibl
 
               **Congratulations!** Now that the agent is installed, the next step is to register and configure it to communicate with the manager. For more information about this process, please visit the :doc:`user manual<../../user-manual/registering/index>`.
 
-           .. tab:: Automated deploy
+           .. tab:: Deploy
 
               .. code-block:: console
 
