@@ -317,3 +317,31 @@ html_context = {
     "conf_py_path": "/source/",
     "github_version": "3.9"
 }
+
+'''
+Wazuh variables 
+
+Example:
+   example_var_name = 'foo'
+   rst_epilog = '.. |example_name| replace:: %s' % example_var_name      
+                                                                         
+In your .rst source:                                                     
+   My config value is |example_name|                                     
+                                                                         
+In your output:                                                              
+   My config value is foo
+'''
+elastic_latest = '7.1.0'
+wazuh_latest = '3.9.1'
+ova_wazuh_latest = '3.9.1'
+ova_elastic_latest = '3.9.1'
+docker_wazuh_latest = '3.9.1'
+docker_elastic_latest = '3.9.1'
+splunk_latest = '7.2.6'
+rst_epilog = '.. |elastic_latest_version| replace:: %s' % elastic_latest
+rst_epilog = '.. |wazuh_latest_tag| replace:: %s' % wazuh_latest
+rst_epilog = '.. |ova_wazuh_latest| replace:: %s' % ova_wazuh_latest
+rst_epilog = '.. |ova_elastic_latest| replace:: %s' % ova_elastic_latest
+rst_epilog = '.. |docker_wazuh_latest| replace:: %s' % docker_wazuh_latest
+rst_epilog = '.. |docker_elastic_latest| replace:: %s' % docker_elastic_latest
+rst_epilog = '.. |splunk_latest| replace:: %s' % splunk_latest
