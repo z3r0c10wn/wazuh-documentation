@@ -139,7 +139,7 @@ We will receive alerts for all files up to ``folder_test/level_1/level_2/level_3
 If we don't want any recursion (just get alerts from the files in the monitored folder), we must set ``recursion_level`` to 0.
 
 .. warning::
-  If ``recursion_level`` is not specified, it will be set to the default value defined by ``syscheck.default_max_depth`` in the :ref:`internal options <reference_internal_options>` configuration file.
+  If ``recursion_level`` is not specified, it will be set to the default value defined by ``default_max_depth`` in the :ref:`syscheck <reference_ossec_syscheck>` configuration section in ``ossec.conf``.
 
 Ignoring files via rules
 ------------------------

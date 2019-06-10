@@ -35,6 +35,14 @@ Options
 - `restart_audit`_
 - `windows_audit_interval`_
 - `whodata`_
+- `sleep_after`_
+- `rt_delay`_
+- `max_fd_win_rt`_
+- `max_audit_entries`_
+- `default_max_depth`_
+- `symlink_scan_interval`_
+- `file_max_size`_
+- `log_level`_
 
 .. _reference_ossec_syscheck_directories:
 
@@ -504,6 +512,145 @@ This option allows to disable the Audit health check during the Whodata engine s
 
 .. warning:: The health check ensures that the rules required by Whodata can be set in Audit correctly and also that the generated events can be obtained. Disabling the health check may cause functioning problems in Whodata and loss of FIM events.
 
+.. _reference_ossec_syscheck_sleep:
+
+sleep
+^^^^^
+
+.. versionadded:: 3.11.0
+
+Time (seconds) to sleep after reading ``<sleep_after>`` number of files.
+
++--------------------+------------------------------------+
+| **Default value**  | 1 second                           |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 0 to 64            |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_sleep_after:
+
+sleep_after
+^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Number of files to read before sleeping for ``<sleep>`` seconds.
+
++--------------------+------------------------------------+
+| **Default value**  | 100 files                          |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 9999          |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_rt_delay:
+
+rt_delay
+^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Time in milliseconds for delay between alerts in real-time (avoids triggering on some temporary files like vim edits).
+
++--------------------+------------------------------------+
+| **Default value**  | 10 ms                              |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 1000          |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_max_fd_win_rt:
+
+max_fd_win_rt
+^^^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Maximum numbers of directories that can be configured for Windows in realtime and whodata mode.
+
++--------------------+------------------------------------+
+| **Default value**  | 256                                |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 1024          |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_max_audit_entries:
+
+max_audit_entries
+^^^^^^^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Maximum number of directories that can be configured for Linux in whodata mode.
+
++--------------------+------------------------------------+
+| **Default value**  | 256                                |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 4096          |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_default_max_depth:
+
+default_max_depth
+^^^^^^^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Maximum level of recursion allowed while reading directories.
+
++--------------------+------------------------------------+
+| **Default value**  | 256                                |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 320           |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_symlink_scan_interval:
+
+symlink_scan_interval
+^^^^^^^^^^^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Check interval of the symbolic links configured in the directories section in seconds (only for Linux).
+
++--------------------+------------------------------------+
+| **Default value**  | 600                                |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 2592000       |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_file_max_size:
+
+file_max_size
+^^^^^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Maximum file size for calcuting integrity hashes in MBytes.
+
++--------------------+------------------------------------+
+| **Default value**  | 1024                               |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 0 to 4095          |
++--------------------+------------------------------------+
+
+.. _reference_ossec_syscheck_log_level:
+
+log_level
+^^^^^^^^^
+
+.. versionadded:: 3.11.0
+
+Debug options. Indicates the level of detail in the ouput log ``ossec.log``.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: No debug output                 |
++                    +------------------------------------+
+|                    | 1: Standard debug output           |
++                    +------------------------------------+
+|                    | 2: Verbose debug output            |
++--------------------+------------------------------------+
+
 
 Default Unix configuration
 --------------------------
@@ -552,4 +699,8 @@ Default Unix configuration
     <nodiff>/etc/ssl/private.key</nodiff>
 
     <skip_nfs>yes</skip_nfs>
+
+    <sleep>4</sleep>
+    <default_max_depth>20</default_max_depth>
+    <log_level>2</log_level>
   </syscheck>

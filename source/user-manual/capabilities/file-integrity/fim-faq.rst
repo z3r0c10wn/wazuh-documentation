@@ -93,4 +93,4 @@ We provide a tool to migrate all registries to the new database. You can checkit
 Can I hot-swap monitored directories?
 --------------------------------------
 
-Yes, this can be done for Linux in both agents and manager by setting the monitoring of symbolic links to directories. To set the refresh interval, use option :doc:`syscheck.symlink_scan_interval <../../reference/internal-options>`.
+Yes, this can be done for Linux in both agents and manager by setting the monitoring of symbolic links to directories. To set the refresh interval, use option :doc:`symlink_scan_interval <../../reference/ossec-conf/syscheck>`.
