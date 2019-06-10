@@ -640,7 +640,7 @@ log_level
 
 .. versionadded:: 3.11.0
 
-Debug options. Indicates the level of detail in the ouput log ``ossec.log``.
+Debug options. Indicates the level of detail in the ouput log ``ossec.log``. Only for UNIX agents and manager.
 
 +--------------------+------------------------------------+
 | **Default value**  | 0                                  |
