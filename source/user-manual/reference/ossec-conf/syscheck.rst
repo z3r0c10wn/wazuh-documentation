@@ -35,6 +35,7 @@ Options
 - `restart_audit`_
 - `windows_audit_interval`_
 - `whodata`_
+- `sleep`_
 - `sleep_after`_
 - `rt_delay`_
 - `max_fd_win_rt`_

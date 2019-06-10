@@ -18,6 +18,7 @@ This part of the user manual will cover the configuration files used by Wazuh an
        ossec-conf/index
        centralized-configuration.rst
        internal-options
+       internal-options-migration
        daemons/index
        tools/index
        unattended-installation
