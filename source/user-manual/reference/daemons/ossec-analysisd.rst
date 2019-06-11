@@ -90,67 +90,9 @@ Automatic leveling of the threads
 
 By default, when Analysisd starts it will spawn the number of threads based on the number of CPU cores of the machine where it's running. For example, if the machine has 4 physiscal cores, the following threads will be created:
 
-    - 4 threads for **decoders** (4 for Syscheck, 4 for Syscollector, 4 for Rootcheck, 4 for Hostinfo and 4 for others).
+    - 4 threads for **decoders** (4 for Syscheck, 4 for Syscollector, 4 for Rootcheck, 4 for SCA, 4 for Hostinfo and 4 for others).
     - 4 threads for **rule matching**.
 
-This default configuration can be changed on the ``internal_options.conf`` file by changing the fields from the table below:
-
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|        **analysisd.event_threads**           | Description   | Number of event decoder threads.                                    |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|       **analysisd.syscheck_threads**         | Description   | Number of Syscheck event decoder threads.                           |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|     **analysisd.syscollector_threads**       | Description   | Number of Syscollector event decoder threads.                       |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|        **analysisd.rootcheck_threads**       | Description   | Number of Rootcheck event decoder threads.                          |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|       **analysisd.hostinfo_threads**         | Description   | Number of hostinfo event decoder threads.                           |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|     **analysisd.rule_matching_threads**      | Description   | Number of rule matching threads.                                    |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
-|     **analysisd.winevt_threads**             | Description   | Number of rule matching threads.                                    |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Default value | 0                                                                   |
-+                                              +---------------+---------------------------------------------------------------------+
-|                                              | Allowed value | 0: Sets the number of threads according to the number of cpu cores. |
-+                                              +               +---------------------------------------------------------------------+
-|                                              |               | Any integer between 0 and 32.                                       |
-+----------------------------------------------+---------------+---------------------------------------------------------------------+
+This default configuration can be changed on the :ref:`Analysis <analysis_threads>` section in ``ossec.conf``.
 
 For example, if the mananger receives little Rootcheck events, we can decrease the number of threads for the Rootcheck decoder.

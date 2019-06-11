@@ -9,7 +9,7 @@ The statistical file for **ossec-analysisd** is located at ``/var/ossec/var/run/
 
 It can be useful when benchmarking our Wazuh manager analysis engine in high loaded environments.
 
-By default, this file is updated every 5 seconds. This interval can be changed by modifying the ``analysisd.state_interval`` value from the :ref:`internal configuration <reference_internal_options>` file.
+By default, this file is updated every 5 seconds. This interval can be changed by modifying the option :ref:`state_interval <reference_ossec_analysis_state_interval>` in the ``ossec.conf`` file.
 
 Below there is an example of the content of the file:
 

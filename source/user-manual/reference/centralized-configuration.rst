@@ -20,6 +20,7 @@ Agents can be configured remotely by using the ``agent.conf`` file. The followin
 - :doc:`System inventory <../capabilities/syscollector>` (**syscollector**)
 - :doc:`Avoid events flooding <ossec-conf/client_buffer>` (**client_buffer**)
 - :doc:`Configure osquery wodle <ossec-conf/wodle-osquery>` (**wodle name="osquery"**)
+- :doc:`Configure analysis options <ossec-conf/analysis>` (**analysis**)
 
 .. note::
   When setting up remote commands in the shared agent configuration, **you must enable remote commands for Agent Modules**. This is enabled by adding the following line to the ``/var/ossec/etc/local_internal_options.conf`` file in the agent:

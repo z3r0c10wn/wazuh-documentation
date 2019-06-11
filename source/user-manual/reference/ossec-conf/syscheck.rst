@@ -700,8 +700,4 @@ Default Unix configuration
     <nodiff>/etc/ssl/private.key</nodiff>
 
     <skip_nfs>yes</skip_nfs>
-
-    <sleep>4</sleep>
-    <default_max_depth>20</default_max_depth>
-    <log_level>2</log_level>
   </syscheck>
