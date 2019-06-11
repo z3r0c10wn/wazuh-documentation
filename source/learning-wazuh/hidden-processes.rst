@@ -29,22 +29,23 @@ Wazuh a very effective Linux rootkit detection application by looking for genera
 
         # sudo su -
 
-4. In your linux-agent's /var/ossec/etc/local_internal_options.conf file, enable debug logging and speed up the rate
-at which rootcheck commences its first scan for the sake of this lab.
+4. In your linux-agent's /var/ossec/etc/ossec.conf file, enable debug logging and speed up the rate
+at which rootcheck commences its first scan for the sake of this lab. Add these options to their respective block:
 
     .. code-block:: console
 
-        # echo "syscheck.debug=2" > /var/ossec/etc/local_internal_options.conf
-        # echo "agent.debug=2" >> /var/ossec/etc/local_internal_options.conf
-        # echo "rootcheck.sleep=0" >> /var/ossec/etc/local_internal_options.conf
-        # echo "syscheck.sleep=0" >> /var/ossec/etc/local_internal_options.conf
+        <syscheck>
+            <log_level>2</log_level>
+            <sleep>0</sleep>
+        </syscheck>
 
-.. note::
-    The /var/ossec/etc/internal_options.conf file contains all possible internal options that you can change, along with
-    explanations of them.  While you can edit this file directly, it gets overwritten during Wazuh upgrades, so it is
-    recommended that you copy the sections you want to customize from /var/ossec/etc/internal_options.conf to
-    /var/ossec/etc/local_internal_options.conf where the changes will not be overwritten.  The settings in
-    local_internal_options.conf always take precedence over the settings in internal_options.conf.
+        <client>
+            <log_level>2</log_level>
+        </client>
+
+        <rootcheck>
+            <sleep>0</sleep>
+        </rootcheck>
 
 5. Install certain packages required for building the rootkit:
 

@@ -13,17 +13,6 @@ observe the alerts that are generated.
 Preparation
 -----------
 
-To turn on Wazuh agent and syscheck debug logging on windows-agent, start Notepad with the "Run as administrator" option and enter this text
-
-    .. code-block:: console
-
-        windows.debug=2
-        syscheck.debug=2
-        rootcheck.sleep=0
-        syscheck.sleep=0
-
-Save this as a new file called "C:\\Program Files (x86)\\ossec-agent\\local_internal_options.conf", making sure under "Save as type:" to choose "All Files" so that the file does not get a .txt extension appended to it.
-
 Open the Windows Command Prompt, using the "Run as administrator" option. Then create a couple of lab directories:
 
     .. code-block:: console
@@ -46,7 +35,26 @@ default <syscheck> section with this:
             <frequency>300</frequency>
             <directories check_all="yes" realtime="yes" report_changes="yes">c:/apple</directories>
             <directories check_all="yes">c:/orange</directories>
+            <sleep>0</sleep>
         </syscheck>
+
+Include the <sleep> option in <rootcheck> (without deleting any other option in this block):
+
+    .. code-block:: console
+
+        <rootcheck>
+            <sleep>0</sleep>
+        </rootcheck>
+
+Include the following option in <client> section (enable debug logging):
+
+    .. code-block:: console
+
+        <client>
+            <log_level>2</log_level>
+        </client>
+
+.. warning:: This configuration is for testing, it's not recommended to set <log_level> and <sleep> options in a production enviroment.
 
 The above enables syscheck FIM on windows-agent, such that a periodic scan of c:\\orange will take place shortly
 after the start or restart of the Wazuh agent, and then every 300 seconds thereafter.  The c:\\apple directory will be monitored

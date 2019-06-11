@@ -1066,7 +1066,7 @@ Rootcheck
 ---------
 
 +--------------------------+----------------+-------------------------------------------------------------------------------+
-|    **rootcheck.sleep**   | Description    | Number of milliseconds to sleep after reading one PID or suspicious port.     |
+|    **rootcheck.sleep**   | Description    | Time (milliseconds) to sleep after reading one PID or suspicious port.        |
 +                          +----------------+-------------------------------------------------------------------------------+
 |                          | Default value  | 50                                                                            |
 +                          +----------------+-------------------------------------------------------------------------------+

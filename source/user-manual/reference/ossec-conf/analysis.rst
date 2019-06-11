@@ -76,7 +76,7 @@ These three options are related as described in the following formula:
 
   event_diff = (alerts_average * percent_diff) / 100 = 150
 
-If the current alerts are more than ``alerts_average`` + ``event_diff``, it would mean the triggering of an alert but as ``event_diff`` is less than ``mindiff`` (in this case) we will trigger an alert when the current alerts generated are more than ``alerts_average`` + ``mindiff`` alerts.
+If the current alerts are more than ``alerts_average`` + ``event_diff``, it would mean the triggering of an alert, but as ``event_diff`` is less than ``mindiff`` (in this case) we will trigger an alert when the current alerts generated are more than ``alerts_average`` + ``mindiff`` alerts.
 
 .. _fts:
 
@@ -97,8 +97,8 @@ FTS (first time seen matched rules) list maximum size.
 min_size_for_str
 ^^^^^^^^^^^^^^^^
 
-FTS minimum string size. This is the string size that is compared from a FTS event with previous FTS events. 
-If the event matches with at least 3 FTS events in the list, this event is ignored. 
+FTS minimum string size. This is the number of characters that are compared from a current FTS event with previous FTS events.
+If the event matches in this way with at least 3 FTS events in the list, this event is ignored.
 
 +--------------------+------------------------------------+
 | **Default value**  | 14                                 |

@@ -40,6 +40,7 @@ Options
 - `check_winaudit`_
 - `check_winmalware`_
 - `skip_nfs`_
+- `sleep`_
 
 base_directory
 ^^^^^^^^^^^^^^^
@@ -318,6 +319,17 @@ Currently, skip_nfs will exclude checking files on CIFS or NFS mounts.
 +--------------------+---------+
 | **Allowed values** | yes, no |
 +--------------------+---------+
+
+sleep
+^^^^^
+
+Time (milliseconds) to sleep after reading one PID or suspicious port.
+
++--------------------+------------------------------------+
+| **Default value**  | 50                                 |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 0 to 1000          |
++--------------------+------------------------------------+
 
 Default Unix configuration
 --------------------------
