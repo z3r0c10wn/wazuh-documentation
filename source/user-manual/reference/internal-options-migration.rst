@@ -84,6 +84,8 @@ In the following table it's indicated the section and the subsection (it may not
 +-------------------------+----------------+----------------------------+------------------------------------------+
 |  <analysis>             |                |  <log_level>               |    analysisd.debug                       |
 +-------------------------+----------------+----------------------------+------------------------------------------+
+|  <database_output>      |                |  <reconnect_attempts>      |    dbd.reconnect_attempts                |
++-------------------------+----------------+----------------------------+------------------------------------------+
 |  <remote>               |                |  <recv_counter_flush>      |    remoted.recv_counter_flush            |
 +-------------------------+----------------+----------------------------+------------------------------------------+
 |  <remote>               |                |  <comp_average_printout>   |    remoted.comp_average_printout         |

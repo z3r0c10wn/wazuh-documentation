@@ -25,6 +25,7 @@ Available options
 - `password`_
 - `database`_
 - `type`_
+- `reconnect_attempts`_
 
 hostname
 ^^^^^^^^
@@ -80,6 +81,17 @@ Type of database (Mysql or PostgreSQL).
 +--------------------+------------------+
 | **Allowed values** | mysql/postgresql |
 +--------------------+------------------+
+
+reconnect_attempts
+^^^^^^^^^^^^^^^^^^
+
+Number of times that the manager will attempt to reconnect to the database.
+
++--------------------+------------------------------------+
+| **Default value**  | 10                                 |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 9999          |
++--------------------+------------------------------------+
 
 Sample configuration
 --------------------
