@@ -215,7 +215,7 @@ Current policy files configured to be run on the agent (either by default or by 
     </agent_config>
 
 .. note::
-    Remote policies are not allowed to run commands by default for security reasons. To enable it, change the ``sca.remote_commands`` of the internal options.
+    Remote policies are not allowed to run commands by default for security reasons. To enable it, set the ``remote`` (in the ``commands`` subsection) option in the :doc:`SCA configuration <../../reference/ossec-conf/sca>` to *1*.
 
 Creating custom SCA policies
 ----------------------------

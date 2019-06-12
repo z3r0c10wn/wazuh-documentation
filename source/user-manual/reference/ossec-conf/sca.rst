@@ -58,6 +58,11 @@ Scheduling options
 
 In the :doc:`SCA documentation<../../capabilities/sec-config-assessment/index>` are shown some cases of using these options.
 
+Other options
+-------------
+
+- `request_db_interval`_
+- :ref:`commands <sca_commands>`
 
 Main options
 ------------
@@ -205,6 +210,48 @@ Time of the day to run the scan. It has to be represented in the format *hh:mm*.
 
 	When only the ``time`` option is set, the interval value must be a multiple of days. By default, the interval is set to a day.
 
+Other options
+-------------
+
+request_db_interval
+^^^^^^^^^^^^^^^^^^^
+
+Security Configuration Assessment database request interval (minutes). This option sets the maximum waiting time to resend a scan when the database integrity check fails.
+
++--------------------+--------------------------------------+
+| **Default value**  | 5                                    |
++--------------------+--------------------------------------+
+| **Allowed values** | Any number between 1 and 60.         |
++--------------------+--------------------------------------+
+
+.. _sca_commands:
+
+Commands subsection
+-------------------
+
+remote
+^^^^^^
+
+Enable it to accept execute commands from SCA policies pushed from the manager in the shared configuration. Local policies ignore this option.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: Disable                         |
++                    +------------------------------------+
+|                    | 1: Enable                          |
++--------------------+------------------------------------+
+
+timeout
+^^^^^^^
+
+Default timeout for executed commands during a SCA scan (seconds).
+
++--------------------+--------------------------------------+
+| **Default value**  | 30                                   |
++--------------------+--------------------------------------+
+| **Allowed values** | Any number between 1 and 300.        |
++--------------------+--------------------------------------+
 
 Configuration example
 ---------------------
@@ -222,4 +269,9 @@ Configuration example
           <policy>cis_apache2224_rcl.yml</policy>
           <policy>/var/ossec/etc/shared/test-group/cis_mysql5-6_enterprise_rcl.yml</policy>
         </policies>
+
+        <commands>
+          <remote>0</remote>
+        </commands>
+        <request_db_interval>8</request_db_interval>
       </sca>
