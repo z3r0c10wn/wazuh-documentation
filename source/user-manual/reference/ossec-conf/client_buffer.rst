@@ -22,6 +22,10 @@ Options
 - `queue_size`_
 - :ref:`length <legacy_length>`
 - `events_per_second`_
+- `tolerance`_
+- `min_eps`_
+- `warn_level`_
+- `normal_level`_
 
 disabled
 ^^^^^^^^
@@ -95,6 +99,51 @@ Specifies the number of events that can be sent to the manager per second.
 +--------------------+----------------------------------+
 | **Allowed values** | Any number between 1 and 1000.   |
 +--------------------+----------------------------------+
+
+tolerance
+^^^^^^^^^
+
+time (seconds) the agent buffer is full before triggering a flooding alert.
+
++--------------------+----------------------------------+
+| **Default value**  | 15                               |
++--------------------+----------------------------------+
+| **Allowed values** | Any number between 0 and 600.    |
++--------------------+----------------------------------+
+
+min_eps
+^^^^^^^
+
+Minimum events per second permitted.
+
++--------------------+----------------------------------+
+| **Default value**  | 50                               |
++--------------------+----------------------------------+
+| **Allowed values** | Any number between 1 and 1000.   |
++--------------------+----------------------------------+
+
+warn_level
+^^^^^^^^^^
+
+Percentage of occupied capacity in agent buffer to trigger a warning alert.
+
++--------------------+----------------------------------+
+| **Default value**  | 90                               |
++--------------------+----------------------------------+
+| **Allowed values** | Any number between 1 and 100.    |
++--------------------+----------------------------------+
+
+normal_level
+^^^^^^^^^^^^
+
+Percentage of occupied capacity in agent buffer to return to normal state.
+
++--------------------+------------------------------------------+
+| **Default value**  | 70                                       |
++--------------------+------------------------------------------+
+| **Allowed values** | Any number between 0 and *warn_level-1*. |
++--------------------+------------------------------------------+
+
 
 Default configuration
 ---------------------

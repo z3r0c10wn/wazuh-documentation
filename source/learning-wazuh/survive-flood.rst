@@ -24,13 +24,7 @@ produced to keep us informed about the onset of, escalation of, and recovery fro
 Configure the Wazuh agent client buffer on linux-agent
 ------------------------------------------------------
 
-1. In this lab, we will limit agent log production to 20 events per second (eps).  By default, this limit is prevented from being set to lower than 50, so we will override that by changing the relevant internal options setting.  This does not  actually set an eps limit.  Rather, it is a strictly agent-side setting that protects the agent from being inadvertently subjected to overly restrictive eps limits pushed to it via Wazuh manager centralized configuration.  Here we make it possible to enforce an eps as low as 10.
-
-    .. code-block:: console
-
-        # echo "agent.min_eps=10" >> /var/ossec/etc/local_internal_options.conf
-
-2. Open /var/ossec/etc/ossec.conf and find the **<client_buffer>** section, which looks like this:
+1. In this lab, we will limit agent log production to 20 events per second (eps).  By default, this limit is prevented from being set to lower than 50, so we will override that by changing the relevant option setting.  This does not  actually set an eps limit.  Rather, it is a strictly agent-side setting that protects the agent from being inadvertently subjected to overly restrictive eps limits pushed to it via Wazuh manager centralized configuration.  Here we make it possible to enforce an eps as low as 10. Open /var/ossec/etc/ossec.conf and find the **<client_buffer>** section, which looks like this:
 
     .. code-block:: xml
 
@@ -39,9 +33,10 @@ Configure the Wazuh agent client buffer on linux-agent
             <disabled>no</disabled>
             <queue_size>5000</queue_size>
             <events_per_second>500</events_per_second>
+            <min_eps>10</min_eps>
         </client_buffer>
 
-3. Restart the Wazuh agent
+2. Restart the Wazuh agent
 
     a. For Systemd:
 
