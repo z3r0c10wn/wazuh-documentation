@@ -30,6 +30,7 @@ Options
 - `verify_sha1`_
 - `verify_sha256`_
 - `skip_verification`_
+- `remote_commands`_
 
 +----------------------+-----------------------------+
 | Options              | Allowed values              |
@@ -194,6 +195,19 @@ In this case, the agent will log that the checksum verification failed but will 
 | **Allowed values** | yes, no |
 +--------------------+---------+
 
+remote_commands
+^^^^^^^^^^^^^^^
+
+Indicates whether the agent should accept remote commands from the manager or not (configured in the centralized configuration as explained below).
+
++--------------------+-------------------------------------------+
+| **Default value**  | 0                                         |
++--------------------+-------------------------------------------+
+| **Allowed values** | 0: Do accept remote commands from manager |
++                    +-------------------------------------------+
+|                    | 1: Accept remote commands from manager    |
++--------------------+-------------------------------------------+
+
 
 Centralized configuration
 -------------------------
@@ -201,12 +215,6 @@ Centralized configuration
 Remote commands may be specified in the :ref:`centralized configuration <reference_agent_conf>`, however, they are disabled by default due to security reasons.
 
 When setting commands in a shared agent configuration, **you must enable remote commands for Agent Modules**.
-
-This is enabled by adding the following line to the file *etc/local_internal_options.conf* in the agent:
-
-.. code-block:: shell
-
-    wazuh_command.remote_commands=1
 
 Example of configuration
 ------------------------

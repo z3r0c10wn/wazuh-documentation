@@ -23,11 +23,7 @@ Agents can be configured remotely by using the ``agent.conf`` file. The followin
 - :doc:`Configure analysis options <ossec-conf/analysis>` (**analysis**)
 
 .. note::
-  When setting up remote commands in the shared agent configuration, **you must enable remote commands for Agent Modules**. This is enabled by adding the following line to the ``/var/ossec/etc/local_internal_options.conf`` file in the agent:
-
-.. code-block:: shell
-
-    wazuh_command.remote_commands=1
+  When setting up remote commands in the shared agent configuration, **you must enable remote commands for Agent Modules**. This is enabled by adding the ``remote_commands`` option in the ``/var/ossec/etc/ossec.conf`` file in the agent (check the option in the wodle :doc:`command <ossec-conf/wodle-command>` configuration section).
 
 Agent groups
 ------------
