@@ -17,6 +17,11 @@ This section shows the options for the registration service.
 
 .. versionadded:: 2.1
 
+Subsections
+-----------
+
+- :ref:`timeout <auth_timeout>`
+
 Options
 -------
 
@@ -34,6 +39,7 @@ Options
 - `ssl_auto_negotiate`_
 - `ciphers`_
 - `limit_maxagents`_
+- `log_level`_
 
 disabled
 ^^^^^^^^
@@ -207,6 +213,53 @@ When set to ``no``, the maximum limit of agents that can be added is ignored.
 +--------------------+---------------------+
 
 .. versionadded:: 3.0.0
+
+log_level
+^^^^^^^^^
+
+Debug options. Indicates the level of detail in the ouput log ``ossec.log``.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: No debug output                 |
++                    +------------------------------------+
+|                    | 1: Standard debug output           |
++                    +------------------------------------+
+|                    | 2: Verbose debug output            |
++--------------------+------------------------------------+
+
+.. _auth_timeout:
+
+Timeout subsection
+------------------
+
+- `seconds`_
+- `microseconds`_
+
+seconds
+^^^^^^^
+
+Network timeout to automatically close connections (second part).
+
++--------------------+--------------------------------------+
+| **Default value**  | 1                                    |
++--------------------+--------------------------------------+
+| **Allowed values** | Any number between 0 and 2147483647. |
++--------------------+--------------------------------------+
+
+microseconds
+^^^^^^^^^^^^
+
+Network timeout to automatically close connections (microsecond part).
+
++--------------------+----------------------------------+
+| **Default value**  | 0                                |
++--------------------+----------------------------------+
+| **Allowed values** | Any number between 0 and 999999. |
++--------------------+----------------------------------+
+
+The timeout time will be equal to timeout_seconds + timeout_microseconds/1000
 
 Default configuration
 ---------------------
