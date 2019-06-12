@@ -26,6 +26,7 @@ Options
 - `nodes`_
 - `hidden`_
 - `disabled`_
+- `log_level`_
 
 name
 ^^^^
@@ -153,6 +154,21 @@ Toggles whether the cluster is enabled or not. If this value is set to **yes**, 
 +--------------------+-----------------------------------------+
 | **Allowed values** | yes, no                                 |
 +--------------------+-----------------------------------------+
+
+log_level
+^^^^^^^^^
+
+Debug options. Indicates the level of detail in the ouput log ``ossec.log``. Only for manager.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: No debug output                 |
++                    +------------------------------------+
+|                    | 1: Standard debug output           |
++                    +------------------------------------+
+|                    | 2: Verbose debug output            |
++--------------------+------------------------------------+
 
 
 Sample configuration
