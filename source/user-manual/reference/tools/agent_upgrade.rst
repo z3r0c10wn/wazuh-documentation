@@ -36,7 +36,7 @@ The agent_upgrade program allows you to list outdated agents and upgrade them.
 | **-c CHUNK_SIZE, --chunk_size CHUNK_SIZE** | Chunk size sending WPK file. Allowed values: [1 - 64000]|
 +--------------------------------------------+---------------------------------------------------------+
 
-.. note:: By default, the timeout will be the maximum allowed by the agent with the ``execd.max_restart_lock`` option in :doc:`internal_options.conf<../internal-options>`.
+.. note:: By default, the timeout will be the maximum allowed by the agent with the ``max_restart_lock`` option in :doc:`Execute <../ossec-conf/execute>` configuration section.
 
 Examples
 ----------

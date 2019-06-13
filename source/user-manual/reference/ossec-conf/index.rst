@@ -48,6 +48,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`email_alerts <email_alerts>`                                  | manager                |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`execute <execute>`                                            | manager, agent         |
++---------------------------------------------------------------------+------------------------+
 | :doc:`global  <global>`                                             | manager                |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`integration  <integration>`                                   | manager                |
@@ -119,6 +121,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    commands
    database-output
    email_alerts
+   execute
    global
    integration
    labels
