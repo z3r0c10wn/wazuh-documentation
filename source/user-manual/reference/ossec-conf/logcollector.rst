@@ -34,7 +34,7 @@ Options
 remote_commands
 ^^^^^^^^^^^^^^^
 
-Enable it to accept execute commands pushed from the manager in the shared configuration.
+Enable it to execute commands pushed from the manager in the shared configuration.
 
 +--------------------+------------------------------------+
 | **Default value**  | 0                                  |
