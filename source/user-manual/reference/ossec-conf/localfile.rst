@@ -38,7 +38,7 @@ Option to get the location of a log or a group of logs. ``strftime`` format stri
 
 For instance, a log file named ``file.log-2017-01-22`` could be referenced with ``file.log-%Y-%m-%d`` (assuming today is Jan 22nd, 2017).
 
-Wildcards may be used on non-Windows systems, but if the log file doesn't exist at the time ``ossec-logcollector`` is started, it will be added after ``logcollector.vcheck_files`` seconds.
+Wildcards may be used on non-Windows systems, but if the log file doesn't exist at the time ``ossec-logcollector`` is started, it will be added after :ref:`vcheck <reference_logcollector_vcheck>` seconds.
 
 Note that ``strftime`` format strings and wildcards cannot be used on the same entry.
 
@@ -289,7 +289,7 @@ Set the format of the log to be read. **field is required**
 
 .. warning::
 
-    Agents will ignore ``command`` and ``full_command`` log sources unless they have ``logcollector.remote_commands=1`` set in their **/var/ossec/etc/internal_options.conf** or **/var/ossec/etc/local_internal_options.conf** file. This is a security precaution to prevent the Wazuh Manager from running arbitrary commands on agents in their root security context.
+    Agents will ignore ``command`` and ``full_command`` log sources unless they have :ref:`remote_commands <reference_logcollector_remote_commands>` enabled in their **/var/ossec/etc/ossec.conf** file. This is a security precaution to prevent the Wazuh Manager from running arbitrary commands on agents in their root security context.
 
 Sample of Multi-line log message in original log file:
 

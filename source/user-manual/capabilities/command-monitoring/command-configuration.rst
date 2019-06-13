@@ -23,26 +23,15 @@ Let's say you want to monitor running processes and alert if an important proces
 
 Example with notepad.exe as the important process to monitor:
 
-1. Configure the agent in the agent's **local_internal_options.conf** file to accept remote commands from the manager.
-
-.. code-block:: console
-
-  # Logcollector - Whether or not to accept remote commands from the manager
-  logcollector.remote_commands=1
-
-2. Define the command in the group's **agent.conf** file to list running processes.
+1. Configure the agent in the agent's **ossec.conf** file to accept remote commands from the manager.
 
 .. code-block:: xml
 
-  <localfile>
-       <log_format>full_command</log_format>
-       <command>tasklist</command>
-       <frequency>120</frequency>
-  </localfile>
+  <logcollector>
+    <remote_commands>1</remote_commands>
+  </logcollector>
 
-The ``<frequency>`` tag defines how often the command will be run in seconds.
-
-3. Define the rules.
+2. Define the rules (manager).
 
 .. code-block:: xml
 
@@ -59,6 +48,20 @@ The ``<frequency>`` tag defines how often the command will be run in seconds.
     <description>Processes running as expected</description>
     <group>process_monitor,</group>
   </rule>
+
+3. Restart the manager to apply the rules defined.
+
+4. Define the command in the group's **agent.conf** file to list running processes.
+
+.. code-block:: xml
+
+  <localfile>
+       <log_format>full_command</log_format>
+       <command>tasklist</command>
+       <frequency>120</frequency>
+  </localfile>
+
+The ``<frequency>`` tag defines how often the command will be run in seconds.
 
 The first rule (100010) will generate an alert ("Important process not running"), unless it is overridden by its child rule (100011) that matches `notepad.exe` in the command output.  You may add as many child rules as needed to enumerate all of the important processes you want to monitor.  You can also adapt this example to monitor Linux processes by changing the ``<command>`` from ``tasklist`` to a Linux command that lists processes, like ``ps -auxw``.
 

@@ -56,6 +56,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`localfile <localfile>`                                        | manager, agent         |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`logcollector <logcollector>`                                  | manager, agent         |
++---------------------------------------------------------------------+------------------------+
 | :doc:`logging <logging>`                                            | manager, agent         |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`mail <mail>`                                                  | manager                |
@@ -121,6 +123,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    integration
    labels
    localfile
+   logcollector
    logging
    mail
    remote
