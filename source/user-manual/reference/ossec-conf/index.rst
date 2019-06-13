@@ -54,6 +54,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`integration  <integration>`                                   | manager                |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`integrator  <integrator>`                                     | manager                |
++---------------------------------------------------------------------+------------------------+
 | :doc:`labels  <labels>`                                             | manager, agent         |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`localfile <localfile>`                                        | manager, agent         |
@@ -124,6 +126,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    execute
    global
    integration
+   integrator
    labels
    localfile
    logcollector
