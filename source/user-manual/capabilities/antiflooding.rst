@@ -193,4 +193,4 @@ In order to avoid agent buffer saturation followed by event loss, the event prod
 
 - OpenSCAP, CIS-CAT and Syscollector wodles: These modules previously did send the entire set of scan results as soon as a scan would complete. They now send the scan information to the manager at a regulated speed in order to prevent the buffer from being collapsed.
 
-The options defined for  advanced configuration are :ref:`max_lines <reference_logcollector_max_lines>` and ``wazuh_modules.max_eps`` and much care should be given when changing these values.
+The options defined for advanced configuration are :ref:`max_lines <reference_logcollector_max_lines>` and :ref:`min_eps <reference_modules_max_eps>` and much care should be given when changing these values.

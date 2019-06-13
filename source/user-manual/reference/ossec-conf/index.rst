@@ -66,6 +66,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`mail <mail>`                                                  | manager                |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`modules <modules>`                                            | manager, agent         |
++---------------------------------------------------------------------+------------------------+
 | :doc:`remote <remote>`                                              | manager                |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`reports <reports>`                                            | manager                |
@@ -132,6 +134,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    logcollector
    logging
    mail
+   modules
    remote
    reports
    rootcheck
