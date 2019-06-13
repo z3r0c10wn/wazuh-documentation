@@ -18,6 +18,7 @@ Subsections
 -----------
 
 - `server`_
+- :ref:`request <reference_ossec_client_request>`
 
 server
 ^^^^^^
@@ -84,6 +85,14 @@ Options
 - `disable-active-response`_
 - `auto_restart`_
 - `crypto_method`_
+- `state_interval`_
+- `recv_timeout`_
+- `remote_conf`_
+- `max_attempts`_
+- `recv_counter_flush`_
+- `comp_avg_printout`_
+- `verify_msg_id`_
+- `log_level`_
 
 .. _legacy_server-ip:
 
@@ -240,6 +249,144 @@ Choose the encryption of the messages that the agent sends to the manager.
 +--------------------+---------------------+
 | **Allowed values** | blowfish, aes       |
 +--------------------+---------------------+
+
+.. _reference_ossec_agent_state_interval:
+
+state_interval
+^^^^^^^^^^^^^^
+
+Interval for agent status file updating (seconds).
+
++--------------------+--------------------------------------------+
+| **Default value**  | 5                                          |
++--------------------+--------------------------------------------+
+| **Allowed values** | 0: Disabled                                |
++                    +--------------------------------------------+
+|                    | Any number between 0 and 86400.            |
++--------------------+--------------------------------------------+
+
+recv_timeout
+^^^^^^^^^^^^
+
+Maximum time waiting for a server response in TCP (seconds).
+
++--------------------+--------------------------------------+
+| **Default value**  | 60                                   |
++--------------------+--------------------------------------+
+| **Allowed values** | Any number between 1 and 600.        |
++--------------------+--------------------------------------+
+
+remote_conf
+^^^^^^^^^^^
+
+Apply or refuse remote configuration. If disabled, the agent won't load the shared configuration pushed by the manager.
+
++--------------------+------------------------------------+
+| **Default value**  | 1                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: Disable shared configuration    |
++                    +------------------------------------+
+|                    | 1: Enable shared configuration     |
++--------------------+------------------------------------+
+
+recv_counter_flush
+^^^^^^^^^^^^^^^^^^
+
+Flush rate for the receive counter.
+
++--------------------+-----------------------------------+
+| **Default value**  | 128                               |
++--------------------+-----------------------------------+
+| **Allowed values** | Any number between 10 and 999999. |
++--------------------+-----------------------------------+
+
+comp_avg_printout
+^^^^^^^^^^^^^^^^^
+
+Compression averages printout.
+
++--------------------+-----------------------------------+
+| **Default value**  | 19999                             |
++--------------------+-----------------------------------+
+| **Allowed values** | Any number between 10 and 999999. |
++--------------------+-----------------------------------+
+
+verify_msg_id
+^^^^^^^^^^^^^
+
+Toggle to enable or disable verification of message id.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: Disable                         |
++                    +------------------------------------+
+|                    | 1: Enable                          |
++--------------------+------------------------------------+
+
+max_attempts
+^^^^^^^^^^^^
+
+Maximum number of sending attempts.
+
++--------------------+------------------------------------+
+| **Default value**  | 4                                  |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 16.           |
++--------------------+------------------------------------+
+
+log_level
+^^^^^^^^^
+
+Debug options. Indicates the level of detail in the ouput log ``ossec.log``.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | 0: No debug output                 |
++                    +------------------------------------+
+|                    | 1: Standard debug output           |
++                    +------------------------------------+
+|                    | 2: Verbose debug output            |
++--------------------+------------------------------------+
+
+.. _reference_ossec_client_request:
+
+Request subsection options
+--------------------------
+
+rto_sec
+^^^^^^^^
+
+Retransmission timeout seconds.
+
++--------------------+------------------------------------+
+| **Default value**  | 1                                  |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 0 to 60.           |
++--------------------+------------------------------------+
+
+rto_msec
+^^^^^^^^
+
+Retransmission timeout milliseconds.
+
++--------------------+------------------------------------+
+| **Default value**  | 0                                  |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 0 to 999.          |
++--------------------+------------------------------------+
+
+pool
+^^^^
+
+Number of parallel threads to dispatch requests.
+
++--------------------+------------------------------------+
+| **Default value**  | 1024                               |
++--------------------+------------------------------------+
+| **Allowed values** | Any number from 1 to 4096.         |
++--------------------+------------------------------------+
 
 Sample configuration
 --------------------

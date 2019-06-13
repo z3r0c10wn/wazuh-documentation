@@ -9,7 +9,7 @@ The statistical file for **ossec-agentd** is located at ``/var/ossec/var/run/oss
 
 This file provides information about the agent as the number of generated events, last connection, agent status and some other useful information. 
 
-By default, this file is updated every 5 seconds. This interval can be changed by modifying the ``agent.state_interval`` value from the :ref:`internal configuration <reference_internal_options>` file.
+By default, this file is updated every 5 seconds. This interval can be changed by modifying the option :ref:`state_interval <reference_ossec_agent_state_interval>` in the ``ossec.conf`` file.
 
 .. note::
     

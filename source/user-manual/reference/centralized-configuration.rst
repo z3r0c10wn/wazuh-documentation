@@ -260,11 +260,13 @@ In other words, the configuration located at ``agent.conf`` will overwrite the o
 How to ignore shared configuration
 ----------------------------------
 
-Whether for any reason you don't want to apply the shared configuration in a specific agent, it can be disabled by adding the following line to the ``/var/ossec/etc/local_internal_options.conf`` file in that agent:
+Whether for any reason you don't want to apply the shared configuration in a specific agent, it can be disabled by adding the option to the ``client`` section in the ``/var/ossec/etc/ossec.conf`` file in that agent:
 
-.. code-block:: shell
+.. code-block:: xml
 
-    agent.remote_conf=0
+    <client>
+      <remote_conf>1</remote_conf>
+    </client>
 
 Download configuration files from remote location
 -------------------------------------------------
