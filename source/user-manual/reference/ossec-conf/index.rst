@@ -48,6 +48,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`database_output <database-output>`                            | manager                |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`download <download>`                                          | manager                |
++---------------------------------------------------------------------+------------------------+
 | :doc:`email_alerts <email_alerts>`                                  | manager                |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`execute <execute>`                                            | manager, agent         |
@@ -127,6 +129,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    commands
    database
    database-output
+   download
    email_alerts
    execute
    global

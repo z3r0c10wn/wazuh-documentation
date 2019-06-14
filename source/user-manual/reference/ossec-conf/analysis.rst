@@ -122,6 +122,8 @@ Time (seconds) without reloading labels in cache from agents.
 | **Allowed values** | Any number from 0 to 60.           |
 +--------------------+------------------------------------+
 
+.. _analysis_show_hidden:
+
 show_hidden
 ^^^^^^^^^^^
 

@@ -513,12 +513,8 @@ This option allows to disable the Audit health check during the Whodata engine s
 
 .. warning:: The health check ensures that the rules required by Whodata can be set in Audit correctly and also that the generated events can be obtained. Disabling the health check may cause functioning problems in Whodata and loss of FIM events.
 
-.. _reference_ossec_syscheck_sleep:
-
 sleep
 ^^^^^
-
-.. versionadded:: 3.11.0
 
 Time (seconds) to sleep after reading ``<sleep_after>`` number of files.
 
@@ -528,12 +524,8 @@ Time (seconds) to sleep after reading ``<sleep_after>`` number of files.
 | **Allowed values** | Any number from 0 to 64            |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_sleep_after:
-
 sleep_after
 ^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Number of files to read before sleeping for ``<sleep>`` seconds.
 
@@ -543,12 +535,8 @@ Number of files to read before sleeping for ``<sleep>`` seconds.
 | **Allowed values** | Any number from 1 to 9999          |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_rt_delay:
-
 rt_delay
 ^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Time in milliseconds for delay between alerts in real-time (avoids triggering on some temporary files like vim edits).
 
@@ -558,12 +546,8 @@ Time in milliseconds for delay between alerts in real-time (avoids triggering on
 | **Allowed values** | Any number from 1 to 1000          |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_max_fd_win_rt:
-
 max_fd_win_rt
 ^^^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Maximum numbers of directories that can be configured for Windows in realtime and whodata mode.
 
@@ -573,12 +557,8 @@ Maximum numbers of directories that can be configured for Windows in realtime an
 | **Allowed values** | Any number from 1 to 1024          |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_max_audit_entries:
-
 max_audit_entries
 ^^^^^^^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Maximum number of directories that can be configured for Linux in whodata mode.
 
@@ -588,12 +568,8 @@ Maximum number of directories that can be configured for Linux in whodata mode.
 | **Allowed values** | Any number from 1 to 4096          |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_default_max_depth:
-
 default_max_depth
 ^^^^^^^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Maximum level of recursion allowed while reading directories.
 
@@ -603,12 +579,8 @@ Maximum level of recursion allowed while reading directories.
 | **Allowed values** | Any number from 1 to 320           |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_symlink_scan_interval:
-
 symlink_scan_interval
 ^^^^^^^^^^^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Check interval of the symbolic links configured in the directories section in seconds (only for Linux).
 
@@ -618,12 +590,8 @@ Check interval of the symbolic links configured in the directories section in se
 | **Allowed values** | Any number from 1 to 2592000       |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_file_max_size:
-
 file_max_size
 ^^^^^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Maximum file size for calcuting integrity hashes in MBytes.
 
@@ -633,12 +601,8 @@ Maximum file size for calcuting integrity hashes in MBytes.
 | **Allowed values** | Any number from 0 to 4095          |
 +--------------------+------------------------------------+
 
-.. _reference_ossec_syscheck_log_level:
-
 log_level
 ^^^^^^^^^
-
-.. versionadded:: 3.11.0
 
 Debug options. Indicates the level of detail in the ouput log ``ossec.log``. Only for UNIX agents and manager.
 

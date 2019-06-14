@@ -122,6 +122,9 @@ Minimum events per second permitted.
 | **Allowed values** | Any number between 1 and 1000.   |
 +--------------------+----------------------------------+
 
+.. warning::
+   This option cannot be changed via shared configuration (``agent.conf``) for security reasons.
+
 warn_level
 ^^^^^^^^^^
 
@@ -143,7 +146,6 @@ Percentage of occupied capacity in agent buffer to return to normal state.
 +--------------------+------------------------------------------+
 | **Allowed values** | Any number between 0 and *warn_level-1*. |
 +--------------------+------------------------------------------+
-
 
 Default configuration
 ---------------------

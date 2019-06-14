@@ -208,6 +208,8 @@ Indicates whether the agent should accept remote commands from the manager or no
 |                    | 1: Accept remote commands from manager    |
 +--------------------+-------------------------------------------+
 
+.. warning::
+   This option cannot be changed via shared configuration (``agent.conf``) for security reasons.
 
 Centralized configuration
 -------------------------

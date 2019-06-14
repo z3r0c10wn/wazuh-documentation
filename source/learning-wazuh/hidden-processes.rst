@@ -202,11 +202,7 @@ at which rootcheck commences its first scan for the sake of this lab. Add these 
             # kill -63 509
             # rmmod diamorphine
 
-15. Remove the custom internal options on linux-agent's that we used for this lab.
-
-        .. code-block:: console
-
-            # rm -f /var/ossec/etc/local_internal_options.conf
+15. Remove the options declared in point 4 on linux-agent's that we used for this lab.
 
 16. In the <rootcheck> section of linux-agent's /var/ossec/etc/ossec.conf file, disable rootcheck for now.
 

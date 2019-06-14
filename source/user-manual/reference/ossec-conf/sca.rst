@@ -242,6 +242,9 @@ Enable it to accept execute commands from SCA policies pushed from the manager i
 |                    | 1: Enable                          |
 +--------------------+------------------------------------+
 
+.. warning::
+   This option cannot be changed via shared configuration (``agent.conf``) for security reasons.
+
 timeout
 ^^^^^^^
 

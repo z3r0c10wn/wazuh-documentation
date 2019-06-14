@@ -289,6 +289,9 @@ Apply or refuse remote configuration. If disabled, the agent won't load the shar
 |                    | 1: Enable shared configuration     |
 +--------------------+------------------------------------+
 
+.. warning::
+   This option cannot be changed via shared configuration (``agent.conf``) for security reasons.
+
 recv_counter_flush
 ^^^^^^^^^^^^^^^^^^
 

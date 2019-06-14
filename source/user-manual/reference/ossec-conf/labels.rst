@@ -43,7 +43,7 @@ Attributes:
 
 .. note::
     
-    In ``internal_options.conf``, hidden labels can be set to be displayed in alerts.
+    In :ref:`Analysis <analysis_show_hidden>` configuration options, hidden labels can be set to be displayed in alerts.
 
 .. note::
     
