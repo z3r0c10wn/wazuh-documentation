@@ -12,7 +12,7 @@ modules
 		<modules>
 		</modules>
 
-This section shows how to configure the common options for ``wazuh modules``. This configuration affects 
+This section shows how to configure the common options for ``wazuh modules``. This affects all wodles, ``SCA``, ``Fluent-Forward`` and ``Download`` module.
 
 Options
 -------
