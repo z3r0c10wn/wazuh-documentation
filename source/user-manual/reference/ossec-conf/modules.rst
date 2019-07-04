@@ -20,6 +20,7 @@ Options
 - `task_nice`_
 - `max_eps`_
 - `kill_timeout`_
+- `thread_stack_size`_
 - `log_level`_
 
 task_nice
@@ -57,6 +58,17 @@ Time for a process to quit before killing it.
 | **Allowed values** | Any number between 0 and 3600.       |
 +--------------------+--------------------------------------+
 
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the modules process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
+
 log_level
 ^^^^^^^^^
 
@@ -83,5 +95,6 @@ This is an example of configuration of this section with the default values set 
     <task_nice>10</task_nice>
     <max_eps>100</max_eps>
     <kill_timeout>10</kill_timeout>
+    <thread_stack_size>8192</thread_stack_size>
     <log_level>0</log_level>
   </modules>

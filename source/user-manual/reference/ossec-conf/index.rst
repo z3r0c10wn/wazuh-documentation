@@ -44,6 +44,8 @@ Wazuh can be installed in two ways: as a manager by using the "server/manager" i
 +---------------------------------------------------------------------+------------------------+
 | :doc:`command <commands>`                                           | manager                |
 +---------------------------------------------------------------------+------------------------+
+| :doc:`csyslog <csyslog>`                                            | manager                |
++---------------------------------------------------------------------+------------------------+
 | :doc:`database <database>`                                          | manager                |
 +---------------------------------------------------------------------+------------------------+
 | :doc:`database_output <database-output>`                            | manager                |
@@ -127,6 +129,7 @@ All of the above sections must be located within the top-level ``<ossec_config>`
    client_buffer
    cluster
    commands
+   csyslog
    database
    database-output
    download

@@ -3,7 +3,7 @@
 .. _reference__ossec_analysis:
 
 analysis
-=============
+========
 
 .. topic:: XML section name
 
@@ -13,6 +13,17 @@ analysis
 		</analysis>
 
 Configuration options for analysis.
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the analysis process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 Subsections
 -----------

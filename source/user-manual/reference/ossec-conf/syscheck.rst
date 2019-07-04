@@ -43,6 +43,7 @@ Options
 - `default_max_depth`_
 - `symlink_scan_interval`_
 - `file_max_size`_
+- `thread_stack_size`_
 - `log_level`_
 
 .. _reference_ossec_syscheck_directories:
@@ -600,6 +601,17 @@ Maximum file size for calcuting integrity hashes in MBytes.
 +--------------------+------------------------------------+
 | **Allowed values** | Any number from 0 to 4095          |
 +--------------------+------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the syscheck process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^

@@ -21,6 +21,7 @@ Options
 - `commit_time`_
 - `open_db_limit`_
 - `rlimit_nofile`_
+- `thread_stack_size`_
 - `log_level`_
 
 Subsections
@@ -175,6 +176,17 @@ Maximum number of file descriptor that WazuhDB can open.
 +--------------------+------------------------------------+
 | **Allowed values** | Any number from 1024 to 1048576.   |
 +--------------------+------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the database process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^

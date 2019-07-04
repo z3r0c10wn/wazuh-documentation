@@ -22,6 +22,7 @@ Options
 - `host`_
 - `state`_
 - `arguments`_
+- `thread_stack_size`_
 
 type
 ^^^^
@@ -89,6 +90,17 @@ Defines the arguments passed to the agentless check.
 | **Default value**  | n/a                                                                                      |
 +--------------------+------------------------------------------------------------------------------------------+
 | **Allowed values** | This is a space-delimited list of files or directories to be monitored.                  |
++--------------------+------------------------------------------------------------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the agentless process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
 +--------------------+------------------------------------------------------------------------------------------+
 
 Sample configuration

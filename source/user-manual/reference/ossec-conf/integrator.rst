@@ -17,7 +17,19 @@ This configures the common options for the :ref:`integration module <reference_o
 Options
 -------
 
+- `thread_stack_size`_
 - `log_level`_
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the integrator process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ---------

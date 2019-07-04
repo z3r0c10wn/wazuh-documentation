@@ -27,6 +27,7 @@ Options
 - `sock_fail_time`_
 - `queue_size`_
 - `sample_log_length`_
+- `thread_stack_size`_
 - `log_level`_
 
 .. _reference_logcollector_remote_commands:
@@ -79,6 +80,17 @@ Sample log length limit for errors about large message. This truncates the outpu
 +--------------------+--------------------------------------+
 | **Allowed values** | Any number between 1 and 4096.       |
 +--------------------+--------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the logcollector process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^

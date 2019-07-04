@@ -92,6 +92,7 @@ Options
 - `recv_counter_flush`_
 - `comp_avg_printout`_
 - `verify_msg_id`_
+- `thread_stack_size`_
 - `log_level`_
 
 .. _legacy_server-ip:
@@ -337,6 +338,17 @@ Maximum number of sending attempts.
 +--------------------+------------------------------------+
 | **Allowed values** | Any number from 1 to 16.           |
 +--------------------+------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the agent process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^

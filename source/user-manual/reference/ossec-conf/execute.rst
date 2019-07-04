@@ -19,6 +19,7 @@ Options
 
 - `request_timeout`_
 - `max_restart_lock`_
+- `thread_stack_size`_
 - `log_level`_
 
 request_timeout
@@ -44,6 +45,17 @@ Maximum timeout that the agent cannot restart while updating (seconds).
 +--------------------+--------------------------------------+
 | **Allowed values** | Any number between 0 and 300.        |
 +--------------------+--------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the exec process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^

@@ -21,6 +21,7 @@ Options
 - `grouping`_
 - `full_subject`_
 - `geoip`_
+- `thread_stack_size`_
 
 strict_checking
 ^^^^^^^^^^^^^^^
@@ -75,8 +76,21 @@ Toggle to enable or disable GeoIP data in alert emails.
 |                    | 1: Enable                          |
 +--------------------+------------------------------------+
 
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the mail process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
+
 Example configuration
 ---------------------
+
+This block doesn’t appear in the default configuration as default values are loaded instead. The following configuration is an example:
 
 .. code-block:: xml
 
@@ -85,4 +99,5 @@ Example configuration
       <grouping>1</grouping>
       <full_subject>0</full_subject>
       <geoip>1</geoip>
+      <thread_stack_size>8192<thread_stack_size>
     </mail>

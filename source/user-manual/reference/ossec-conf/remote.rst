@@ -30,6 +30,7 @@ Options
 - `verify_msg_id`_
 - `pass_empty_keyfile`_
 - `rlimit_nofile`_
+- `thread_stack_size`_
 - `log_level`_
 
 connection
@@ -196,6 +197,17 @@ Maximum number of file descriptor that Remoted can open
 +--------------------+--------------------------------------+
 | **Allowed values** | Any number between 1024 and 1048576. |
 +--------------------+--------------------------------------+
+
+thread_stack_size
+^^^^^^^^^^^^^^^^^
+
+Defines the stack size for child threads created by the remote process in KiB.
+
++--------------------+------------------------------------------------------------------------------------------+
+| **Default value**  | 8192                                                                                     |
++--------------------+------------------------------------------------------------------------------------------+
+| **Allowed values** | Any integer between 2048 and 65536                                                       |
++--------------------+------------------------------------------------------------------------------------------+
 
 log_level
 ^^^^^^^^^
