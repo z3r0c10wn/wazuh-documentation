@@ -11,7 +11,7 @@ Location
 --------
 
 UNIX systems
-    Folder ``etc`` inside the installation directory.
+    Folder ``etc`` inside the installation directory. By default ``/var/ossec/etc/``.
 
 Windows agents
     Installation directory.
