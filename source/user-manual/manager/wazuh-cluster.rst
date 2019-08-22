@@ -61,7 +61,7 @@ All communications among nodes in the cluster are encrypted using AES algorithm.
 Worker
 ~~~~~~
 
-Worker nodes are responsible of two main tasks:
+Worker nodes are responsible for two main tasks:
 
     - Synchronizing :ref:`integrity files <integrity-thread>` from the master node.
     - Sending :ref:`agent status updates <agent-info-thread>` to the master.
@@ -281,9 +281,9 @@ The image below shows the communications between a worker and a master node. Eac
 
 There are different independent threads running, each one is framed in the image:
 
-    - **Keep alive thread**: Responsible of sending a keep alive to the master every so often.
-    - **Agent info thread**: Responsible of sending the statuses of the agents that are reporting to that node.
-    - **Integrity thread**: Responsible of synchronizing the files sent by the master.
+    - **Keep alive thread**: Responsible for sending a keep alive to the master every so often.
+    - **Agent info thread**: Responsible for sending the statuses of the agents that are reporting to that node.
+    - **Integrity thread**: Responsible for synchronizing the files sent by the master.
 
 All cluster logs are written in the file ``logs/cluster.log``.
 
