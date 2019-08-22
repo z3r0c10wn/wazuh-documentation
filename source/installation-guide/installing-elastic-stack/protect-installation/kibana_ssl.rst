@@ -120,7 +120,7 @@ NGINX SSL proxy for Kibana (RPM-based distributions)
 
   .. note::
 
-    We configure Nginx in order to encapsulate the IP address of the Kibana server. This configuration allows Kibana requests to be redirected to HTTPS. When using this configuration, it is recommended that the file ``/etc/kibana/kibana.yml`` be edited to set the field ``server.host`` to ``localhost``. The Kibana service must be restarted to apply this change.
+    We configure NGINX in order to encapsulate the IP address of the Kibana server. This configuration allows Kibana requests to be redirected to HTTPS. When using this configuration, it is recommended that the file ``/etc/kibana/kibana.yml`` be edited to set the field ``server.host`` to ``localhost``. The Kibana service must be restarted to apply this change.
 
 4. Allow NGINX to connect to the Kibana port if SELinux is being used:
 
@@ -227,7 +227,7 @@ NGINX SSL proxy for Kibana (Debian-based distributions)
 
   .. note::
 
-    We configure Nginx in order to encapsulate the IP address of the Kibana server. This configuration allows Kibana requests to be redirected to HTTPS. When using this configuration, it is recommended that the file ``/etc/kibana/kibana.yml`` be edited to set the field ``server.host`` to ``localhost``. The Kibana service must be restarted to apply this change.
+    We configure NGINX in order to encapsulate the IP address of the Kibana server. This configuration allows Kibana requests to be redirected to HTTPS. When using this configuration, it is recommended that the file ``/etc/kibana/kibana.yml`` be edited to set the field ``server.host`` to ``localhost``. The Kibana service must be restarted to apply this change.
 
 Enable authentication by htpasswd
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

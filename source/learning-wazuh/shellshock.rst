@@ -15,10 +15,10 @@ that is produced and the rule that produced it, you will then set up and test se
 the attacker (linux-agent) will be automatically firewalled off from the Linux lab systems and null routed by the Windows lab
 system in response to this malicious probe being directed at elastic-server.
 
-Confirm Wazuh agent on elastic-server monitors the Nginx logs
+Confirm Wazuh agent on elastic-server monitors the NGINX logs
 -------------------------------------------------------------
 
-The Nginx **access.log** and **error.log** file paths should be monitored by default by the Wazuh agent.
+The NGINX **access.log** and **error.log** file paths should be monitored by default by the Wazuh agent.
 Confirm that these <localfile> sections are indeed present in /var/ossec/etc/ossec.conf:
 
     .. code-block:: xml

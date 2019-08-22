@@ -183,10 +183,10 @@ Logstash
 
         $ kubectl delete deploy wazuh-logstash --namespace wazuh
 
-Kibana and Nginx
+Kibana and NGINX
 ----------------
 
-1. First, remove the services related to Kibana and Nginx.
+1. First, remove the services related to Kibana and NGINX.
 
     .. code-block:: console
 

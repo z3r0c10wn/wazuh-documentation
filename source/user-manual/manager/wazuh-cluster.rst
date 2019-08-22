@@ -212,9 +212,9 @@ The correct way to use it is to point every agent to send the events to the *loa
 
     This configuration will depend of the load balancer service choosen.
 
-Here is a short configuration guide of a **load balancer** using Nginx:
+Here is a short configuration guide of a **load balancer** using NGINX:
 
-  1. Install Nginx in the *load balancer instance*:
+  1. Install NGINX in the *load balancer instance*:
 
       - Download the packages from the `Official Page. <http://nginx.org/en/linux_packages.html>`_
       - Follow the steps related on that guide to install the packages.

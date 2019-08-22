@@ -29,7 +29,7 @@ Like a *Deployment*, a *StatefulSet* manages Pods that are based on an identical
 
 It is useful for stateful applications like databases that save the data to persistent storage. The states of each Wazuh manager, as well as Elasticsearch, are desirable to maintain, so we declare them using *StatefulSet* to ensure that they maintain their states in every startup.
 
-Deployments are intended for stateless use and are quite lightweight and seem to be appropriate for Logstash, Kibana and Nginx, where it is not necessary to maintain the states.
+Deployments are intended for stateless use and are quite lightweight and seem to be appropriate for Logstash, Kibana and NGINX, where it is not necessary to maintain the states.
 
 Persistent volumes are pieces of storage in the provisioned cluster. It is a resource in the cluster just like a node is a cluster resource. Persistent volumes are volume plugins like Volumes but have a lifecycle independent of any individual pod that uses the PV. This API object captures the details of the implementation of the storage, be that NFS, iSCSI, or a cloud-provider-specific storage system.
 
@@ -92,9 +92,9 @@ Kibana pod, the frontend for Elasticsearch, it also includes the Wazuh app.
 | wazuh/wazuh-kibana:3.9.0_6.7.1 | Deployment  |
 +--------------------------------+-------------+
 
-**Nginx**
+**NGINX**
 
-Nginx service used as a reverse proxy for Kibana.
+NGINX service used as a reverse proxy for Kibana.
 
 +--------------------------------+-------------+
 | Image                          | Controller  |
@@ -180,7 +180,7 @@ Deploy
             $ kubectl apply -f elastic_stack/elasticsearch/elasticsearch-api-svc.yaml
             $ kubectl apply -f elastic_stack/elasticsearch/elasticsearch-sts.yaml
 
-    3.3. Deploy Kibana and Nginx
+    3.3. Deploy Kibana and NGINX
 
         In case you need to provide a domain name, update the *domainName* annotation value in the ``nginx-svc.yaml`` file before deploying that service. You should also set a valid AWS ACM certificate ARN in the ``nginx-svc.yaml`` for the `service.beta.kubernetes.io/aws-load-balancer-ssl-cert` annotation. That certificate should match with the `domainName`.
 

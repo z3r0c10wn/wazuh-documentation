@@ -7,13 +7,13 @@ Set up Kibana
 
 Here we will set up SSL communications on the front end and back end of Kibana and the Wazuh Kibana API, as well as set up associated credentials.
 
-Set up Nginx as an authenticating SSL reverse proxy to Kibana
+Set up NGINX as an authenticating SSL reverse proxy to Kibana
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Since Kibana does not natively provide authentication or https service for web browser access, we will now set up Nginx to serve
+Since Kibana does not natively provide authentication or https service for web browser access, we will now set up NGINX to serve
 as an authenticating SSL reverse proxy to Kibana.  Do the following on the Elastic Server:
 
-1. Install Nginx:
+1. Install NGINX:
 
     .. code-block:: console
 
@@ -34,7 +34,7 @@ as an authenticating SSL reverse proxy to Kibana.  Do the following on the Elast
       # openssl req -x509 -batch -nodes -days 365 -newkey rsa:2048 -keyout /etc/pki/tls/private/kibana-access.key -out /etc/pki/tls/certs/kibana-access.pem
       # ls -alh /etc/pki/tls/private/kibana-access.key /etc/pki/tls/certs/kibana-access.pem
 
-3. Configure Nginx as an authenticating HTTPS reverse proxy to Kibana:
+3. Configure NGINX as an authenticating HTTPS reverse proxy to Kibana:
 
   .. code-block:: console
 
@@ -55,7 +55,7 @@ as an authenticating SSL reverse proxy to Kibana.  Do the following on the Elast
     }
     EOF
 
-4. Configure SELinux to allow Nginx to connect to Kibana:
+4. Configure SELinux to allow NGINX to connect to Kibana:
 
   .. code-block:: console
 
@@ -77,7 +77,7 @@ Enable authentication by htpasswd
 
     # htpasswd -c /etc/nginx/conf.d/kibana.htpasswd wazuh
 
-3. Restart Nginx:
+3. Restart NGINX:
 
   .. code-block:: console
 

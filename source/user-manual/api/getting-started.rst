@@ -150,7 +150,7 @@ It can also be helpful to know what rules are available that match a specific cr
                    "10.2.5",
                    "11.4"
                 ],
-                "description": "Nginx: Multiple web authentication failures.",
+                "description": "NGINX: Multiple web authentication failures.",
                 "file": "0260-nginx_rules.xml",
                 "level": 10,
                 "path": "/var/ossec/ruleset/rules",

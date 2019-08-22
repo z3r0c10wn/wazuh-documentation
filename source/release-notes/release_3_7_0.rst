@@ -154,7 +154,7 @@ New features for Splunk plugin
 
 The Wazuh app for Splunk also receives lots of new features and improvements on this new version. The Configuration tab is also improved as on the Kibana plugin to get the current manager/agent configuration, multiple groups support, and also:
 
-  - A documentation article to :ref:`set up a reverse proxy configuration <splunk_reverse_proxy>` for Nginx and the Splunk plugin is now available.
+  - A documentation article to :ref:`set up a reverse proxy configuration <splunk_reverse_proxy>` for NGINX and the Splunk plugin is now available.
   - Added *Dev tools*, *Amazon AWS*, *Osquery*, *Inventory data* and *Monitoring* tabs to the app.
   - Added *app logs* to monitor to check and troubleshoot problems while using the app.
   - Added a new selector to check the cluster nodes’ status and logs on the *Management > Status/Logs* tabs.

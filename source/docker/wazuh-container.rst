@@ -101,7 +101,7 @@ Usage
 
       $ git clone https://github.com/wazuh/wazuh-docker.git -b 3.9.5_7.2.1 --single-branch
 
-#. Start Wazuh, Elastic Stack and Nginx using `docker-compose`. From the directory where you have the ``docker-compose.yml`` file:
+#. Start Wazuh, Elastic Stack and NGINX using `docker-compose`. From the directory where you have the ``docker-compose.yml`` file:
 
   a) Foreground::
 
@@ -133,9 +133,9 @@ By default, the stack exposes the following ports:
 +-----------+-----------------------------+
 | **9200**  | Elasticsearch HTTP          |
 +-----------+-----------------------------+
-| **80**    | Nginx http                  |
+| **80**    | NGINX http                  |
 +-----------+-----------------------------+
-| **443**   | Nginx https                 |
+| **443**   | NGINX https                 |
 +-----------+-----------------------------+
 
 .. note::
