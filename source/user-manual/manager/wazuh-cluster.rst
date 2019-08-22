@@ -35,8 +35,8 @@ Servers eventually fail: hardware can be broken, a human can turn them off, the 
     :align: center
     :width: 80%
 
-Types of nodes
-^^^^^^^^^^^^^^
+Cluster node types
+^^^^^^^^^^^^^^^^^^
 
 Master
 ~~~~~~
