@@ -17,10 +17,10 @@ Wazuh server
 
 The Wazuh server is based on a suite of applications where each application or component is designed to accomplish a certain task. These components work together to:
 
-- analyze data received from various logs,
-- trigger alerts when a log event matches a rule,
-- register new clients/agents, and
-- send data to the Elastic Stack server.
+- Analyze data received from various logs.
+- Trigger alerts when a log event matches a rule.
+- Register new clients/agents.
+- Send data to the Elastic Stack server.
 
 Components
 ``````````
