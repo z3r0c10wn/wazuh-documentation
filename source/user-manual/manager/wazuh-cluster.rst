@@ -28,7 +28,7 @@ It multiplies Wazuh's event processing capacity and allows it to have thousands 
 High availability
 ~~~~~~~~~~~~~~~~~
 
-Servers eventually fail: hardware can be broken, a human can turn them off, the system can go down... And while the server is restored, you won't be able to see what is happening in your agents. Using a cluster you make sure your agents will always have a manager to report to.
+Servers eventually fail: hardware can be broken, a human can turn them off, the system can go down... And while the server is restored, you won't be able to see what is happening in your agents. Using a cluster allows you to make sure that the agents will always have a manager to report to.
 
 .. thumbnail:: ../../images/manual/cluster/cluster_infrastructure.png
     :title: Wazuh cluster infrastructure
