@@ -41,7 +41,7 @@ Elastic Stack is used to index, browse and visualize Wazuh alerts data. In addit
 Components
 ``````````
 
-- The **Wazuh app** is a Kibana plugin designed to display Wazuh related information providing a RESTful API web interface. This interface makes administration of the Wazuh Manager and Wazuh Agents easy and powerful.
+- The **Wazuh app** is a Kibana plugin designed to display Wazuh related information providing a web interface. This interface makes administration of the Wazuh Manager and Wazuh Agents easy and powerful.
 
 
 - **Elasticsearch** is a highly scalable full-text search and analytics engine. It is used to index alerts data and historical agents status information. More information can be found at the `Elasticsearch official documentation <https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html>`_.
