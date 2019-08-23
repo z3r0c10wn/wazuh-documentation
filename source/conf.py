@@ -17,6 +17,21 @@ import os
 import shlex
 import datetime
 
+# -- Caché external assets----------------------------------------------------
+# The next section is required to check the information of external files,
+# which uses absolute URLs
+import time
+import locale
+if sys.version_info[0] >= 3:
+    # For Python 3+
+    from urllib.request import urlopen
+else:
+    # For Python 2
+    from urllib2 import urlopen
+
+# Sets locale to avoid problems with location
+locale.setlocale(locale.LC_ALL, 'C')
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -32,6 +47,8 @@ copyright = u'&copy; ' + str(datetime.datetime.now().year) + u' &middot; Wazuh I
 version = '2.1'
 # The full version, including alpha/beta/rc tags
 release = version
+# Indicates if the version specified above is the latest: True/False
+is_latest = False
 
 # -- General configuration ------------------------------------------------
 
@@ -343,15 +360,36 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 todo_include_todos = False
 
 # -- Setup -------------------------------------------------------------------
+# The latest version takes the assets from its own _static/ folder. The remaining
+# versions will take the assets from the URL https://documentation.wazuh.com/current/_static/
 
 def setup(app):
-    actual_path = os.path.dirname(os.path.realpath(__file__))
-    app.add_stylesheet("css/font-awesome.min.css?ver=%s" % os.stat(
-        os.path.join(actual_path, "_static/css/font-awesome.min.css")).st_mtime)
-    app.add_stylesheet("css/wazuh-icons.css?ver=%s" % os.stat(
-        os.path.join(actual_path, "_static/css/wazuh-icons.css")).st_mtime)
-    app.add_stylesheet("css/style.css?ver=%s" % os.stat(
-        os.path.join(actual_path, "_static/css/style.css")).st_mtime)
+    assets_css = [
+        "css/font-awesome.min.css",
+        "css/wazuh-icons.css",
+        "css/style.css",
+    ]
+
+    if is_latest == True:
+        actual_path = os.path.dirname(os.path.realpath(__file__))
+        for cssfile in assets_css:
+            app.add_stylesheet(cssfile+"?ver=%s" % os.stat(
+                os.path.join(actual_path, "_static/"+cssfile)).st_mtime)
+    else:
+        abs_url = "https://documentation.wazuh.com/current/_static/"
+        for cssfile in assets_css:
+            app.add_stylesheet(abs_url+cssfile+"?ver=%s" % urltimestamp(abs_url+cssfile))
+
+def urltimestamp(asset_url):
+    timeformat = "%a, %d %b %Y %H:%M:%S %Z"
+    if sys.version_info[0] >= 3:
+        # For Python 3+
+        timestring = dict(urlopen(asset_url).getheaders())["Last-Modified"]
+    else:
+        # For Python 2
+        timestring = urlopen(asset_url).headers.getheaders('Last-Modified')[0]
+    timestamp = time.mktime(datetime.datetime.strptime(timestring, '%a, %d %b %Y %H:%M:%S %Z').timetuple())
+    return timestamp
 
 # -- Additional configuration ------------------------------------------------
 html_context = {
@@ -359,5 +397,6 @@ html_context = {
     "github_user": "wazuh",
     "github_repo": "wazuh-documentation",
     "conf_py_path": "/source/",
-    "github_version": version
+    "github_version": version,
+    "is_latest": is_latest,
 }
