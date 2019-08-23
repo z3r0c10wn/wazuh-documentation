@@ -378,7 +378,7 @@ def setup(app):
     else:
         abs_url = "https://documentation.wazuh.com/current/_static/"
         for cssfile in assets_css:
-            app.add_stylesheet(abs_url+cssfile+"?ver=%s" % urltimestamp(abs_url+cssfile))
+            app.add_stylesheet(cssfile+"?ver=%s" % urltimestamp(abs_url+cssfile))
 
 def urltimestamp(asset_url):
     timeformat = "%a, %d %b %Y %H:%M:%S %Z"

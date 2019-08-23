@@ -18,10 +18,22 @@
 {%- endif %}
 
 {%- macro css() %}
-  <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-  {% for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
-  {% endfor %}
+  {%- if is_latest %}
+
+    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    {% for cssfile in css_files %}
+      <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+    {% endfor %}
+
+  {%- else %}
+
+    <link rel="stylesheet" href="{{ pathto(master_doc + '/../../current/_static/' + style, 1) }}" type="text/css" />
+    {% for cssfile in css_files %}
+      <link rel="stylesheet" href="{{ pathto(master_doc + '/../../current/' +  cssfile, 1) }}" type="text/css" />
+    {% endfor %}
+
+  {%- endif %}
+
   <link rel='stylesheet' id='google-fonts-css'  href='https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,700|Fira+Mono' type='text/css' media='all' />
 {%- endmacro %}
 
