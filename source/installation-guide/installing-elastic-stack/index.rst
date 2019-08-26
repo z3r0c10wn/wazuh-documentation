@@ -9,34 +9,23 @@ This guide describes the installation of an Elastic Stack server comprised of Fi
 
 In addition to Elastic Stack components, you will also find the instructions to install and configure the Wazuh app (deployed as a Kibana plugin).
 
-Depending on your operating system you can choose to install Elastic Stack from RPM or DEB packages. Consult the table below and choose how to proceed:
+Elastic Stack can be installed either on a single host or be set up on a distributed environment.
 
-+--------------------------------------------+-----------------------------------------------+
-| Type                                       | Description                                   |
-+============================================+===============================================+
-| `RPM packages <elastic_server_rpm.html>`_  | Install Elastic Stack on CentOS/RHEL/Fedora.  |
-+--------------------------------------------+-----------------------------------------------+
-| `DEB packages <elastic_server_deb.html>`_  | Install Elastic Stack on Debian/Ubuntu.       |
-+--------------------------------------------+-----------------------------------------------+
+- `Single Host Architecture <single-host/index.html>`_
 
-After the installation, find below optional steps you may find interesting:
-
-- :ref:`Elasticsearch tuning <elastic_tuning>`
-- :ref:`Transform your data with Logstash <transform_logstash>`
-- :ref:`Insert a Wazuh API entry automatically <automatic_api>`
+-  `Distributed Environment Architecture <distributed-environment/index.html>`_
 
 
-.. note::
-
-    Currently, the Elastic Stack is only supported on 64-bit operating systems, according to its `Support Matrix <https://www.elastic.co/support/matrix>`_.
 
 .. toctree::
    :hidden:
    :maxdepth: 2
 
-   elastic_server_rpm
-   elastic_server_deb
+   single-host/index
    protect-installation/index
-   transform_logstash
-   elastic_tuning
-   automatic_api
+   elastic_tuning.rst
+   automatic_api.rst
+   transform_logstash.rst
+
+   elastic_server_deb.rst
+   elastic_server_rpm.rst
