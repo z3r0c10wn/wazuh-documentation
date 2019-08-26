@@ -13,7 +13,7 @@ Elastic Stack can be installed either on a single host or be set up on a distrib
 
 - `Single Host Architecture <single-host/index.html>`_
 
--  `Distributed Environment Architecture <distributed-environment/index.html>`_
+-  `Distributed Environment Architecture <distributed-architecture/index.html>`_
 
 
 
@@ -22,6 +22,7 @@ Elastic Stack can be installed either on a single host or be set up on a distrib
    :maxdepth: 2
 
    single-host/index
+   distributed-architecture/index
    protect-installation/index
    elastic_tuning.rst
    automatic_api.rst
