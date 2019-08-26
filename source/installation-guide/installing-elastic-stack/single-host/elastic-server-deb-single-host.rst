@@ -1,11 +1,11 @@
 .. Copyright (C) 2019 Wazuh, Inc.
 
-.. _elastic_server_rpm:
+.. _elastic_server_deb_single_host:
 
-Install Elastic Stack with RPM packages
-=======================================
+Install Elastic Stack with Debian packages
+==========================================
 
-The RPM packages are suitable for installation on Red Hat, CentOS and other RPM-based systems.
+The DEB package is suitable for Debian, Ubuntu and other Debian-based systems.
 
 .. note:: All the commands described below need to be executed with root user privileges.
 
@@ -16,17 +16,10 @@ Preparation
 
   .. code-block:: console
 
-    # rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch
-    # cat > /etc/yum.repos.d/elastic.repo << EOF
-    [elasticsearch-7.x]
-    name=Elasticsearch repository for 7.x packages
-    baseurl=https://artifacts.elastic.co/packages/7.x/yum
-    gpgcheck=1
-    gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    enabled=1
-    autorefresh=1
-    type=rpm-md
-    EOF
+    # apt-get install curl apt-transport-https
+    # curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+    # echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee /etc/apt/sources.list.d/elastic-7.x.list
+    # apt-get update
 
 Elasticsearch
 -------------
@@ -37,23 +30,10 @@ Elasticsearch is a highly scalable full-text search and analytics engine. For mo
 
   .. code-block:: console
 
-    # yum install elasticsearch-7.3.0
+    # apt-get install elasticsearch=7.3.0
 
-2. **Optional.** Elasticsearch will only listen on the loopback interface (localhost) by default. Configure Elasticsearch to listen on all interfaces by editing the file ``/etc/elasticsearch/elasticsearch.yml`` and uncommenting the setting ``network.host``. Change the value to:
 
-   .. code-block:: yaml
-
-     network.host: 0.0.0.0
-
-3. If you are installing a **distributed architecture**, you will have to make an additional configuration change by editing the file ``/etc/elasticsearch/elasticsearch.yml``. Add or edit (if commented) the following lines:
-
-   .. code-block:: yaml
-
-     node.name: node-1
-     network.host: 0.0.0.0
-     cluster.initial_master_nodes: ["node-1"]
-
-4. Enable and start the Elasticsearch service:
+2. Enable and start the Elasticsearch service:
 
   a) For Systemd:
 
@@ -67,10 +47,10 @@ Elasticsearch is a highly scalable full-text search and analytics engine. For mo
 
   .. code-block:: console
 
-    # chkconfig --add elasticsearch
+    # update-rc.d elasticsearch defaults 95 10
     # service elasticsearch start
 
-5. Once Elasticsearch is up and running, it is recommended to load the Filebeat template. Run the following command where Filebeat was installed (current host, for single architecture or Wazuh manager host for distributed architecture):
+3. Once Elasticsearch is up and running, it is recommended to load the Filebeat template. Run the following command where Filebeat was installed (current host, for single architecture or Wazuh manager host for distributed architecture):
 
   .. code-block:: console
 
@@ -82,7 +62,7 @@ Elasticsearch is a highly scalable full-text search and analytics engine. For mo
 
         # curl http://YOUR_ELASTIC_SERVER_IP:9200
 
-.. _install_kibana_app_rpm:
+.. _install_kibana_app_deb_single_host:
 
 Kibana
 ------
@@ -93,27 +73,15 @@ Kibana is a flexible and intuitive web interface for mining and visualizing the 
 
   .. code-block:: console
 
-    # yum install kibana-7.3.0
+    # apt-get install kibana=7.3.0
 
 2. Install the Wazuh app plugin for Kibana:
 
-   
-  * Install from URL:
-    
   .. code-block:: console
 
     # sudo -u kibana /usr/share/kibana/bin/kibana-plugin install https://packages.wazuh.com/wazuhapp/wazuhapp-3.9.5_7.3.0.zip
 
-  * Install from the package:
-
-  .. code-block:: console
-
-     # sudo -u kibana /usr/share/kibana/bin/kibana-plugin install file:///path/wazuhapp-3.9.5_7.3.0.zip
-
-  .. note:: The `path` should have *read* permissions for *others*. E.g: The directory `/tmp/` accomplishes this.
-
-    
-3. **Optional.** Kibana will only listen on the loopback interface (localhost) by default. Configure Kibana to listen on all interfaces by editing the file ``/etc/kibana/kibana.yml`` and uncommenting the setting ``server.host``. Change the value to:
+3. **Optional.** Kibana will only listen on the loopback interface (localhost) by default. To set up Kibana to listen on all interfaces, edit the file ``/etc/kibana/kibana.yml`` uncommenting the setting ``server.host``. Change the value to:
 
   .. code-block:: yaml
 
@@ -133,16 +101,24 @@ Kibana is a flexible and intuitive web interface for mining and visualizing the 
 
   .. code-block:: console
 
-    # chkconfig --add kibana
+    # update-rc.d kibana defaults 95 10
     # service kibana start
 
-5. (Optional) Disable the Elasticsearch repository:
+5. (Optional) Disable the Elasticsearch updates:
 
   It is recommended that the Elasticsearch repository be disabled in order to prevent an upgrade to a newer Elastic Stack version due to the possibility of undoing changes with the App. To do this, use the following command:
 
   .. code-block:: console
 
-    # sed -i "s/^enabled=1/enabled=0/" /etc/yum.repos.d/elastic.repo
+    # sed -i "s/^deb/#deb/" /etc/apt/sources.list.d/elastic-7.x.list
+    # apt-get update
+
+  Alternately, you can set the package state to ``hold``, which will stop updates (although you can still upgrade it manually using ``apt-get install``).
+
+  .. code-block:: console
+
+    # echo "elasticsearch hold" | sudo dpkg --set-selections
+    # echo "kibana hold" | sudo dpkg --set-selections
 
 .. note:: The Kibana service listens on the default port 5601.
 
@@ -160,7 +136,7 @@ To uninstall Elasticsearch:
 
     .. code-block:: console
 
-      # yum remove elasticsearch
+      # apt-get remove elasticsearch
 
 There are files marked as configuration and data files. Due to this designation, the package manager doesn't remove those files from the filesystem. The complete files removal action is a user responsibility. It can be done by removing the folder ``/var/lib/elasticsearch`` and ``/etc/elasticsearch``.
 
@@ -168,6 +144,6 @@ To uninstall Kibana:
 
     .. code-block:: console
 
-      # yum remove kibana
+      # apt-get remove kibana
 
 As in the previous case, the complete files removal can be done by removing the folder ``/var/lib/kibana`` and ``/etc/kibana``.

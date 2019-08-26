@@ -26,6 +26,3 @@ Elastic Stack can be installed either on a single host or be set up on a distrib
    elastic_tuning.rst
    automatic_api.rst
    transform_logstash.rst
-
-   elastic_server_deb.rst
-   elastic_server_rpm.rst
