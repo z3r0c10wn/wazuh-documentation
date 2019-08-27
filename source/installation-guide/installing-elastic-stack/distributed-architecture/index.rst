@@ -34,4 +34,5 @@ After the installation, find below optional steps you may find interesting:
 
    elastic-server-rpm-distributed-architecture.rst
    elastic-server-deb-distributed-architecture.rst
+   configure-elasticsearch-cluster.rst
    
