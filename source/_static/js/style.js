@@ -35,7 +35,15 @@ $(function() {
   markTocNodesWithClass(emptyTocNodes, 'empty-toc-node');
   checkScroll();
   if (document.location.hash) {
-    correctScrollTo(spaceBeforeAnchor);
+    /* If is EDGE */
+    const isIE = /* @cc_on!@*/false || !!document.documentMode;
+    const isEDGE = !isIE && !!window.StyleMedia;
+    if (isEDGE) {
+      correctScrollTo(0);
+    /* If is other browser */
+    } else {
+      correctScrollTo(spaceBeforeAnchor);
+    }
   }
 
   /* Finds current page section in globaltoc */
@@ -64,6 +72,12 @@ $(function() {
   $(window).on('hashchange', function() {
     updateFromHash();
     correctScrollTo(spaceBeforeAnchor);
+  });
+
+  $('.headerlink').on('click', function() {
+    if (loc == $(this).attr('href')) {
+      correctScrollTo(spaceBeforeAnchor);
+    }
   });
 
   /**
