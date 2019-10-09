@@ -90,7 +90,7 @@ Upgrade Elasticsearch
 
   .. code-block:: yaml
   
-    cluster.seed_hosts:
+    discovery.seed_hosts:
       - master_node_name_or_ip_address
     cluster.initial_master_nodes:
       - master_node_name_or_ip_address
