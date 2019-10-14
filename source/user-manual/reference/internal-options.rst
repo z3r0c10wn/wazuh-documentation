@@ -685,13 +685,13 @@ Monitord
 +                                  +---------------+--------------------------------------------------------------------+
 |                                  | Allowed value | 0, 1                                                               |
 +----------------------------------+---------------+--------------------------------------------------------------------+
-| **monitord.monitor_agents**      | Description   | Toggle to enable or disable monitoring of agents.                  |
+| **monitord.monitor_agents**      | Description   | Toggle to enable the checking of agents' status.                   |
 +                                  +---------------+--------------------------------------------------------------------+
 |                                  | Default value | 1                                                                  |
 +                                  +---------------+--------------------------------------------------------------------+
 |                                  | Allowed value | 0, 1                                                               |
 +----------------------------------+---------------+--------------------------------------------------------------------+
-|   **monitord.rotate_log**        | Description   | Toggle to enable or disable daily rotation of internal logs.       |
+|   **monitord.rotate_log**        | Description   | Toggle to enable or disable rotation of internal logs.             |
 |                                  |               |                                                                    |
 |                                  |               | .. versionadded:: 3.0.0                                            |
 +                                  +---------------+--------------------------------------------------------------------+
