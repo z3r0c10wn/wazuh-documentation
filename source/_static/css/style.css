@@ -78,7 +78,6 @@ Author: Wazuh Inc.
 
 html {
   height: 100%;
-  overflow-x: hidden;
 }
 
 a:focus{
@@ -809,7 +808,6 @@ li.toctree-l5 > a {
   left: 0;
   background-color: #f8f8f8;
   overflow-y: auto;
-  overflow-x: hidden;
   position: absolute;
   z-index: 2;
 }
@@ -2093,12 +2091,11 @@ pre {
 code {
   display: inline-block;
   vertical-align: middle;
-  white-space: nowrap;
   max-width: 100%;
   background: #fff;
   border: solid 1px #e1e4e5;
-  font-size: 75%;
-  padding: 1px 5px;
+  font-size: 85%;
+  padding: 0px 4px;
   color: #E74C3C;
   overflow-x: auto;
 }
@@ -2505,7 +2502,6 @@ body {
   color: #333333;
   line-height: 1.4;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 #page {
@@ -2564,8 +2560,9 @@ ul#breadcrumbs li:before {
 
 ul#breadcrumbs li,
 ul#breadcrumbs a {
-  font-size: 0.87rem;
+  margin: 2px 0;
   padding-top: 0;
+  font-size: 0.95rem;
 }
 
 .edit-repo {
