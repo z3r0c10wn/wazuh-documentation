@@ -29,3 +29,4 @@ This module requires dependencies in order to work, and also the right credentia
     kms
     inspector
     trusted-advisor
+    waf
