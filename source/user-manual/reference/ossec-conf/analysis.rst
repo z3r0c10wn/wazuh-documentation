@@ -246,8 +246,8 @@ Number of rule matching threads.
 Queue size subsection options
 -----------------------------
 
-event
-^^^^^
+decode_event
+^^^^^^^^^^^^
 
 Event decoder queue size.
 
@@ -257,8 +257,8 @@ Event decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-syscheck
-^^^^^^^^
+decode_syscheck
+^^^^^^^^^^^^^^^
 
 Syscheck decoder queue size.
 
@@ -268,8 +268,8 @@ Syscheck decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-syscollector
-^^^^^^^^^^^^
+decode_syscollector
+^^^^^^^^^^^^^^^^^^^
 
 Syscollector decoder queue size.
 
@@ -279,8 +279,8 @@ Syscollector decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-rootcheck
-^^^^^^^^^
+decode_rootcheck
+^^^^^^^^^^^^^^^^
 
 Rootcheck decoder queue size.
 
@@ -290,8 +290,8 @@ Rootcheck decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-sca
-^^^
+decode_sca
+^^^^^^^^^^
 
 SCA decoder queue size.
 
@@ -301,8 +301,8 @@ SCA decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-hostinfo
-^^^^^^^^
+decode_hostinfo
+^^^^^^^^^^^^^^^
 
 Hostinfo decoder queue size.
 
@@ -312,8 +312,8 @@ Hostinfo decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-winevent
-^^^^^^^^
+decode_winevent
+^^^^^^^^^^^^^^^
 
 Windows event decoder queue size.
 
@@ -323,8 +323,8 @@ Windows event decoder queue size.
 | **Allowed values** | Any number from 128 to 2000000.    |
 +--------------------+------------------------------------+
 
-output
-^^^^^^
+decode_output
+^^^^^^^^^^^^^
 
 Output decoder queue size.
 
@@ -531,7 +531,6 @@ This block doesn’t appear in the default configuration as default values are l
       <list_size>300</list_size>
       <min_size_for_str>26</min_size_for_str>
     </fts>
-    <geoip_jsonout>0</geoip_jsonout>
     <labels>
       <show_hidden>1</show_hidden>
     </labels>
@@ -542,9 +541,9 @@ This block doesn’t appear in the default configuration as default values are l
       <rule_matching>0</rule_matching>
     </threads>
     <queue_size>
-      <event>200</event>
-      <syscheck>10000</syscheck>
-      <syscollector>35250</syscollector>
+      <decode_event>200</decode_event>
+      <decode_syscheck>10000</decode_syscheck>
+      <decode_syscollector>35250</decode_syscollector>
     </queue_size>
     <state_interval>2000</state_interval>
     <log_level>2</log_level>

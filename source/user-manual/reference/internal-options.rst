@@ -6,9 +6,9 @@ Internal configuration
 =======================
 
 Some internal configuration features are located in the ``/var/ossec/etc/internal_options.conf`` file. 
-However, this file is being deprecated (.. versionadded:: 3.11.0) in favour of ``ossec.conf`` where internal options can be specified as indicated in LINK.
+However, this file is being deprecated (.. versionadded:: 3.11.0) in favour of ``ossec.conf`` where internal options can be specified.
 
-The indications to migrate from the old ``/var/ossec/etc/internal_options.conf`` to ``ossec.conf`` are available in LINK
+The indications to migrate from the old ``/var/ossec/etc/internal_options.conf`` to ``ossec.conf`` are available in :ref:`internal options migration <reference_internal_options_migration>`.
 
 This file still has precedence over the new options in ``ossec.conf`` file. **This file won't be created in new installations.**
 

@@ -99,5 +99,5 @@ This block doesn’t appear in the default configuration as default values are l
       <grouping>1</grouping>
       <full_subject>0</full_subject>
       <geoip>1</geoip>
-      <thread_stack_size>8192<thread_stack_size>
+      <thread_stack_size>8192</thread_stack_size>
     </mail>
