@@ -656,12 +656,39 @@ footer {
   color: #ffffff;
 }
 
-.copyright {
-  color: #ffffff;
+.download-pdf {
+  display: block;
+  margin-top: 15px;
   text-align: center;
-  line-height: 2em;
-  margin-top: 10px;
-  margin-bottom: 20px;
+}
+
+.download-pdf a {
+  display: inline-block;
+}
+
+.download-pdf a:hover {
+  border: 0 !important;
+}
+
+.download-pdf i {
+  float: left;
+  color: #0094ce;
+  margin-right: 10px;
+  font-size: 1.7rem;
+}
+
+.download-pdf span {
+  float: left;
+  color: #333;
+  line-height: 0.95rem;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.copyright {
+  float: none;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .menu-item.rrss a{
@@ -2757,6 +2784,41 @@ div.highlight pre {
 	#page.page-404 #main-content #rst-content {
 		padding-left: 2rem;
 	}
+
+  .download-pdf {
+    display: inline-block;
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  .download-pdf a {
+    display: inline-block;
+  }
+  
+  .download-pdf a:hover {
+    border: 0;
+  }
+  
+  .download-pdf i {
+    float: left;
+    color: #0094ce;
+    margin-right: 10px;
+    font-size: 1.7rem;
+  }
+  
+  .download-pdf span {
+    float: left;
+    color: #333;
+    line-height: 0.95rem;
+    font-size: 0.8rem;
+  }
+  
+  .copyright {
+    float: right;
+    padding-top: 10px;
+    text-align: right;
+  }
+
 }
 
 @media (min-width: 768px){
@@ -2942,13 +3004,6 @@ div.highlight pre {
         display: -ms-flex;
         display: flex;
         justify-content: flex-end;
-      }
-
-      .copyright {
-        text-align: left;
-        margin: 0;
-        position: absolute;
-        bottom: 1em;
       }
 
       .footer-column {
