@@ -667,7 +667,7 @@ footer {
 }
 
 .download-pdf a:hover {
-  border: 0 !important;
+  border-color: transparent !important;
 }
 
 .download-pdf i {

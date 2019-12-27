@@ -1,6 +1,6 @@
 from docutils.parsers.rst.directives.admonitions import BaseAdmonition
 from sphinx.util import compat
-from PyPDF2 import PdfFileMerger
+from PyPDF3 import PdfFileMerger
 compat.make_admonition = BaseAdmonition
 
 # -*- coding: utf-8 -*-
@@ -15,12 +15,14 @@ compat.make_admonition = BaseAdmonition
 
 import sys
 import os
+import io
 import re
 import shlex
 import datetime
 
 from os import listdir
 from os.path import isfile, isdir, join
+from io import open
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -460,7 +462,7 @@ def file_get_contents(urls, path, filename):
     if '.rst' not in filename:
         filename_rst += '.rst'
     if os.path.exists(filename_rst):
-        fp = open(filename_rst, "r", encoding="utf8")
+        fp = io.open(filename_rst, "r", encoding="utf8")
         content = fp.read()
         fp.close()
         rst = content.split('.. toctree::')
