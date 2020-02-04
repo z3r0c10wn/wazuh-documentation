@@ -152,7 +152,7 @@ redirections.push(
     },
     {
       'target': ['3.10=>3.11', '3.11=>3.10'],
-      '3.10': 'getting-started/index.html',
+      '3.10': 'getting-started/components.html',
       '3.11': 'getting-started/testitest.html',
     }
 );
