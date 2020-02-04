@@ -203,6 +203,11 @@ newUrls['3.11'] = [
   'getting-started/testitest.html',
 ];
 
+/* Pages no longer available in 3.11 */
+
+removedUrls['3.11'] = [
+  'getting-started/components.html',
+];
 
 /* *** RELEASE 3.10 ****/
 
