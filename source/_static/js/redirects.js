@@ -152,8 +152,8 @@ redirections.push(
     },
     {
       'target': ['3.10=>3.11', '3.11=>3.10'],
-      '3.10': 'getting-started/components.html',
-      '3.11': 'getting-started/testitest.html',
+      '3.10': '/getting-started/components.html',
+      '3.11': '/getting-started/testitest.html',
     }
 );
 
@@ -200,13 +200,13 @@ newUrls['3.11'] = [
   '/release-notes/release_3_11_1.html',
   '/release-notes/release_3_11_2.html',
   '/release-notes/release_3_11_3.html',
-  'getting-started/testitest.html',
+  '/getting-started/testitest.html',
 ];
 
 /* Pages no longer available in 3.11 */
 
 removedUrls['3.11'] = [
-  'getting-started/components.html',
+  '/getting-started/components.html',
 ];
 
 /* *** RELEASE 3.10 ****/
