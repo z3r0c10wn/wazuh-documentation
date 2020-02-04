@@ -82,6 +82,22 @@ Upgrade Elasticsearch
 
         # apt-get install elasticsearch=7.5.2
         # systemctl restart elasticsearch
+  
+#. Fixing problems with elastic plugins:
+        
+    * Reinstall discovery-ec2:
+        .. code-block:: console
+        
+        # /usr/share/elasticsearch/bin/elasticsearch-plugin remove discovery-ec2
+        
+        # /usr/share/elasticsearch/bin/elasticsearch-plugin install discovery-ec2
+ 
+    * Reinstall repository-s3: 
+        .. code-block:: console
+        
+        # /usr/share/elasticsearch/bin/elasticsearch-plugin remove repository-s3
+        
+        # /usr/share/elasticsearch/bin/elasticsearch-plugin install repository-s3  
 
 #. Restart the service.
 
