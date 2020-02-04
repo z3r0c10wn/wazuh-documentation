@@ -149,6 +149,11 @@ redirections.push(
       'target': ['3.10=>3.11', '3.11=>3.10'],
       '3.10': '/user-manual/reference/ossec-conf/wodle-vuln-detector.html',
       '3.11': '/user-manual/reference/ossec-conf/vuln-detector.html',
+    },
+    {
+      'target': ['3.10=>3.11', '3.11=>3.10'],
+      '3.10': 'getting-started/index.html',
+      '3.11': 'getting-started/testitest.html',
     }
 );
 
@@ -195,6 +200,7 @@ newUrls['3.11'] = [
   '/release-notes/release_3_11_1.html',
   '/release-notes/release_3_11_2.html',
   '/release-notes/release_3_11_3.html',
+  'getting-started/testitest.html',
 ];
 
 
